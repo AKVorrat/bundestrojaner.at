@@ -1,0 +1,374 @@
+@import './reset.css';
+@import './utils.css';
+
+:root {
+	--dark: #4C566A;
+	--darker: #3B4252;
+	--darkest: #2E3440;
+	--light: #D8DEE9;
+	--lighter: #E5E9F0;
+	--lightest: #ECEFF4;
+	--white: #fff;
+	--black: #000;
+  --pink: #bf75f7;
+  --blue: #00b0ec;
+	--font-sans: sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	/* --font-mono: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; */
+	--font-mono: monospace, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New';
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::selection,
+::-moz-selection {
+  background: var(--blue);
+  color: var(--black);
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-family: var(--font-mono);
+  scroll-padding-top: 1rem;
+}
+
+body {
+	background: linear-gradient(to bottom right, hsl(220, 35%, 30%), hsl(250, 35%, 40%), hsl(280, 35%, 30%));
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: var(--dark);
+  display: flex;
+  flex-direction: column;
+	font-size: 1rem;
+	line-height: 1.5;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: slateblue;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+h1, .h1 {
+  font-size: 2rem;
+  border-bottom: 1px solid slateblue;
+}
+
+h2, .h2 {
+  font-size: 1.75rem;
+  border-bottom: 1px solid slateblue;
+}
+
+h3, .h3 {
+  font-size: 1.5rem;
+}
+
+h4, .h4 {
+  font-size: 1.25rem;
+}
+
+h5, .h5 {
+  font-size: 1.15rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+b,
+p b {
+  font-weight: 700;
+}
+
+i {
+  font-style: italic;
+}
+
+a,
+button {
+  transition: all .35s ease;
+}
+
+a,
+a:active {
+  color: var(--pink);
+  text-decoration: none;
+
+  &:not(:has(img)):hover,
+  &:not(:has(img)):focus {
+    background: linear-gradient(to bottom right, var(--blue), color-mix(in srgb, var(--blue), transparent 80%));
+    color: var(--light);
+  }
+}
+
+a[href^="https://"].ext {
+  display: inline-block;
+
+  &:not(:has(img))::after {
+    --size: .875em;
+
+    display: inline-block;
+    content: "";
+    color: var(--text);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none' /%3E%3Cpath d='M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6' /%3E%3Cpath d='M11 13l9 -9' /%3E%3Cpath d='M15 4h5v5' /%3E%3C/svg%3E");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 2px;
+    line-height: var(--size);
+    width: var(--size);
+    height: var(--size);
+  }
+}
+
+a:not(.logo) img {
+  opacity: 1;
+  transition: all .35s ease;
+}
+
+a:not(.logo):hover img {
+  opacity: .5;
+}
+
+.btn {
+  background: transparent;
+  border: 2px solid var(--blue);
+  color: var(--light);
+  padding: .25rem .5rem;
+  /* padding-top: .4rem; */
+  text-decoration: none;
+
+  &:hover {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: var(--white);
+  }
+}
+
+details:hover {
+  cursor: pointer;
+}
+
+label {
+  color: var(--blue);
+  font-size: 1.125rem;
+}
+
+input,
+textarea {
+  background: transparent;
+  border: 1px solid rgba(200, 200, 200, .25);
+  display: block;
+  border-radius: 0;
+  color: var(--light);
+  font-family: var(--font-mono);
+  font-size: .875rem;
+  padding: .25rem .5rem;
+  /* padding-top: .4rem; */
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+  height: 128px;
+}
+
+.field-note {
+  margin-bottom: .5rem;
+}
+
+::placeholder {
+  color: var(--light);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-mono);
+}
+
+header,
+main,
+footer {
+  background: rgba(25, 25, 25, .5);
+  color: var(--light);
+  width: 100%;
+  max-width: calc(100vw-2rem);
+  margin: 0 auto;
+  border-left: 1px solid var(--black);
+  border-right: 1px solid var(--black);
+}
+
+@media screen and (min-width: 1024px) {
+  header,
+  main,
+  footer {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header,
+  main,
+  footer {
+    max-width: 1024px;
+  }
+}
+
+header {
+  background: linear-gradient(to bottom right, rgba(0,176,236,1) 0%, rgba(191,117,247,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+header nav {
+  background: rgba(25, 25, 25, .75);
+  border-top: 1px solid var(--black);
+  box-shadow: inset 0 2px 16px 0 rgba(31, 38, 135, .37);
+  padding: .75rem 1rem;
+}
+
+header nav a {
+  color: var(--pink);
+  text-transform: uppercase;
+}
+
+.logo {
+  box-shadow: 0 2px 16px 0 rgba(31, 38, 135, .37);
+  opacity: 1;
+  transition: all .35s ease;
+
+  &:hover {
+    opacity: .95;
+    box-shadow: 0 0 32px 8px var(--blue);
+  }
+}
+
+main {
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  flex-grow: 1;
+  padding: 3rem 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    padding: 3rem 2rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 576px) {
+  .directory-index {
+    max-width: 50%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .directory-index {
+    max-width: 40%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  background: rgba(25, 25, 25, .5);
+  border: 1px solid transparent;
+  box-shadow: 0 2px 16px 0 rgba(31, 38, 135, .37);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  font-size: .875rem;
+  padding: 1.5rem;
+  transition: all .35s ease;
+
+  &:hover {
+    border: 1px solid rgba(200, 200, 200, .25);
+    box-shadow: 0 2px 4px 0 rgba(31, 38, 135, .37);
+  }
+}
+
+.card h3 {
+  color: var(--blue);
+}
+
+footer {
+  background: rgba(5, 5, 5, .75);
+  padding: 3rem 2rem;
+}
+
+.outro,
+.outro a {
+  color: #6c757d;
+
+  & a:hover {
+    color: var(--white);
+  }
+}
+
+.form-listing {
+  margin-bottom: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .narrow {
+    width: 576px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .narrow {
+    width: 640px;
+  }
+
+  .logo {
+    margin: 3rem auto;
+  }
+
+  .outro {
+    width: 768px;
+  }
+}
+
+footer nav a {
+  color: var(--blue);
+}
+
+.mobile-column {
+  flex-direction: column;
+}
+
+@media screen and (min-width: 576px) {
+  .mobile-column {
+    flex-direction: row;
+  }
+}
+
+/* safari fixes */
+@supports (-webkit-touch-callout: none) {
+  /* disable input:focus zooming that happens for font sizes <16px */
+  input,
+  textarea {
+    font-size: 16px !important;
+  }
+}

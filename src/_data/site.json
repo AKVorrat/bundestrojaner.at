@@ -1,0 +1,43 @@
+{
+  "author": "epicenter.works",
+  "baseUrl": "https://bundestrojaner.at",
+  "description": "tbd",
+  "title": "Homepage",
+  "email": "webmaster@epicenter.works",
+  "menu": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Argumente",
+      "url": "#argumente"
+    },
+    {
+      "label": "Zitate",
+      "url": "#zitate"
+    },
+    {
+      "label": "History",
+      "url": "#history"
+    }
+  ],
+  "footerButtons": [
+    {
+      "label": "Newsletter",
+      "url": "#"
+    },
+    {
+      "label": "Mitmachen",
+      "url": "#"
+    },
+    {
+      "label": "Spenden",
+      "url": "#"
+    },
+    {
+      "label": "Termine",
+      "url": "#"
+    }
+  ]
+}
