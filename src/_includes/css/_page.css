@@ -11,7 +11,6 @@
 	--lightest: #ECEFF4;
 	--white: #fff;
 	--black: #000;
-  --blue: #bf75f7;
   --blue: royalblue;
 	--font-sans: sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 	/* --font-mono: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; */
@@ -42,7 +41,7 @@ html {
 }
 
 body {
-	background: var(--light);
+	background: var(--white);
 	color: var(--text);
   display: flex;
   flex-direction: column;

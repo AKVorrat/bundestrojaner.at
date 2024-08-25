@@ -176,6 +176,10 @@
   font-size: .75rem;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .uppercase {
   text-transform: uppercase;
 }

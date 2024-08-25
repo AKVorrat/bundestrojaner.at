@@ -51,6 +51,10 @@ export default async function(config) {
     return collection.getFilteredByGlob('./src/arguments/**/*.md')
   })
 
+  config.addCollection('feedback', async(collection) => {
+    return collection.getFilteredByGlob('./src/feedback/**/*.md')
+  })
+
   config.addCollection('quotes', async(collection) => {
     return collection.getFilteredByGlob('./src/quotes/**/*.md')
   })
