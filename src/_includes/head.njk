@@ -10,6 +10,9 @@
 <link rel="canonical" href="{{ absolutePageUrl }}">
 
 <link rel="stylesheet" href="/css/page.css">
+{% if isFront %}
+  <link rel="stylesheet" href="/css/chartist.min.css">
+{% endif %}
 
 {# Open Graph #}
 <meta property="og:site_name" content="{{ site.author }}">

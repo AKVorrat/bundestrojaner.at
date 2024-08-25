@@ -1,20 +1,35 @@
-// PKGS
-const _ = require('lodash')
-const dnt = require('date-and-time')
-const htmlmin = require('html-minifier')
-const markdownIt = require('markdown-it')
+import _ from 'lodash'
+import dotenv from 'dotenv'
+import { EleventyHtmlBasePlugin } from '@11ty/eleventy'
+import htmlmin from 'html-minifier'
+import markdownIt from 'markdown-it'
+import { minify } from 'terser'
+
+dotenv.config()
 
 const isProdDeployment = Boolean(
   process.env.ELEVENTY_RUN_MODE
   && process.env.ELEVENTY_RUN_MODE === 'build'
 )
 
-module.exports = (config) => {
-  config.addFilter('formatDate', (date) => {
-    const d = date
-      ? new Date(date)
-      : new Date()
-    return dnt.format(d, 'MMM DD YYYY, HH:mm')
+export default async function(config) {
+  // PLUGINS
+  config.addPlugin(EleventyHtmlBasePlugin)
+
+  config.addNunjucksAsyncFilter('jsmin', async function(code, callback) {
+    if (isProdDeployment) {
+      try {
+        const minified = await minify(code)
+        callback(null, minified.code)
+      } catch (ex) {
+        console.error('Terser error: ', ex)
+        // Fail gracefully.
+        callback(null, code)
+      }
+    } else {
+      // localhost: output unminified JS
+      callback(null, code)
+    }
   })
 
   // rebuild on CSS changes
@@ -44,6 +59,7 @@ module.exports = (config) => {
   config.addPassthroughCopy({ './src/static/': '/' })
 
   // TRANSFORM -- Minify HTML Output
+  // Unless we're running `serve` mode for local development
   if (isProdDeployment) {
     config.addTransform('htmlmin', (content, outputPath) => {
       if (outputPath && outputPath.endsWith('.html')) {

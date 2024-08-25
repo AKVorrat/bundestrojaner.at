@@ -9,5 +9,16 @@
       {{ content | safe }}
     </main>
     {% include "footer.njk" %}
+    {% if isFront %}
+      <script src="https://campaign.epicenter.works/js/iframeResizer.parent.umd.js"></script>
+      <script src="/js/chartist.umd.min.js"></script>
+      {% set js %}
+        {% include "js/usePetition.js" %}
+        {% include "js/useChart.js" %}
+      {% endset %}
+      <script>
+        {{ js | jsmin | safe }}
+      </script>
+    {% endif %}
   </body>
 </html>

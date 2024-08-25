@@ -41,6 +41,18 @@
   }
 }
 
+.grid {
+  display: grid;
+}
+
+.grid2 {
+  grid-template-columns: 1fr;
+
+  @media screen and (min-width: 576px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .w100 {
   width: 100%;
 }
@@ -90,6 +102,11 @@
 .px2 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .m0 {

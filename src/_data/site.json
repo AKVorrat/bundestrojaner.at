@@ -22,6 +22,20 @@
       "url": "#history"
     }
   ],
+  "videos": [
+    {
+      "title": "Video 1",
+      "url": "#"
+    },
+    {
+      "title": "Video 2",
+      "url": "#"
+    },
+    {
+      "title": "Video 3",
+      "url": "#"
+    }
+  ],
   "footerButtons": [
     {
       "label": "Newsletter",
