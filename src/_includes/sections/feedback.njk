@@ -1,8 +1,39 @@
-<section class="container mx-auto">
-  <div class="text-center py2">
-    <p>slider</p>
-    <p>
-      <a href="#">Alle Stellungnahmen</a>
-    </p>
+<section class="my4">
+  <div class="container mx-auto">
+    <h2 class="uppercase text-center mb2">Stellungnahmen</h2>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        {% for item in collections.feedback | reverse %}
+          <div class="swiper-slide">
+            <div class="feedback-slide">
+              <div class="flex gap1 align-items-center justify-content-center mb1">
+                <img class="" src="/img/logos/{{ item.data.logo }}" width="50" alt="Stellungnahme von {{ item.data.author }}">
+                <p class="bold m0">{{ item.data.author }}</p>
+              </div>
+              <blockquote>
+                {{ item.templateContent | safe }}
+              </blockquote>
+              <p class="text-center m0">
+                <a class="ext" href="{{ item.data.source }}">Quelle</a>
+              </p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <div class="mt2">
+      <p class="text-center m0">
+        <a class="btn" href="#">Alle Stellungnahmen</a>
+      </p>
+    </div>
   </div>
 </section>

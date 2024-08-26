@@ -53,6 +53,7 @@ export default async function(config) {
 
   config.addCollection('feedback', async(collection) => {
     return collection.getFilteredByGlob('./src/feedback/**/*.md')
+      .sort((a, b) => b.data.order - a.data.order)
   })
 
   config.addCollection('quotes', async(collection) => {

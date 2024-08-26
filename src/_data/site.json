@@ -2,12 +2,12 @@
   "author": "epicenter.works",
   "baseUrl": "https://bundestrojaner.at",
   "description": "tbd",
-  "title": "Homepage",
+  "title": "bundestrojaner.at",
   "email": "webmaster@epicenter.works",
   "menu": [
     {
-      "label": "Home",
-      "url": "/"
+      "label": "Petition",
+      "url": "#petition"
     },
     {
       "label": "Argumente",
