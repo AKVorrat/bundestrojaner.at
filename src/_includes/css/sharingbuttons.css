@@ -9,7 +9,7 @@
 }
 
 .resp-sharing-button {
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   transition: 25ms ease-out;
   padding: 0.5em 0.75em;
   font-family: var(--font-sans);

@@ -4,6 +4,7 @@ import { EleventyHtmlBasePlugin } from '@11ty/eleventy'
 import htmlmin from 'html-minifier'
 import markdownIt from 'markdown-it'
 import { minify } from 'terser'
+import filters from './src/utils/filters.js'
 
 dotenv.config()
 
@@ -46,14 +47,20 @@ export default async function(config) {
     })
   )
 
+  // FILTERS
+  Object.keys(filters).forEach((filterName) => {
+    config.addFilter(filterName, filters[filterName])
+  })
+
   // COLLECTIONS
   config.addCollection('arguments', async(collection) => {
     return collection.getFilteredByGlob('./src/arguments/**/*.md')
+      .sort((a, b) => a.data.order - b.data.order)
   })
 
   config.addCollection('feedback', async(collection) => {
     return collection.getFilteredByGlob('./src/feedback/**/*.md')
-      .sort((a, b) => b.data.order - a.data.order)
+      .sort((a, b) => a.data.order - b.data.order)
   })
 
   config.addCollection('quotes', async(collection) => {

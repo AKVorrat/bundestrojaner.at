@@ -1,8 +1,18 @@
-<section class="container py2 mx-auto">
-  <h2 class="text-center">
-    Videos
-  </h2>
-  <div class="text-center">
-    <p>videos go here</p>
+<div id="videos" class="flex justify-content-center px1m">
+  <img src="/img/bt_illustration_big.svg" width="500" alt="bundestrojaner illustration" style="margin-bottom: -1.25rem;">
+</div>
+<section class="bg-light mb4">
+  <div class="container pt2 pb4 px1m">
+    <h2 class="uppercase text-center mb2">
+      Videos
+    </h2>
+    <ul class="grid grid2 gap2">
+      {% for item in site.videos %}
+        <li class="video-wrapper block shadow">
+          <img id="video-thumb" class="block video-thumbnail w100" src="/img/{{ item.cover }}" width="350" alt="{{ item.title }}" title="Play Video" loading="lazy" decoding="async">
+          <div class="video" style="display: none;" data-video-id="vid{{ loop.index }}" data-video-url="{{ item.url }}"></div>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 </section>

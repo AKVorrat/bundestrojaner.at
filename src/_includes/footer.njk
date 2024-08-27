@@ -1,5 +1,18 @@
-<footer class="text-center text-sm">
-  <p class="mx-auto">
-    first the buttons, then the few links in the footer
+<div class="flex justify-content-center px1m mt4" style="z-index: 10;">
+  <img class="drop-shadow" src="/img/bt_trojan_horse.svg" width="300" alt="bundestrojaner illustration" style="margin-bottom: -3rem;">
+</div>
+<footer class="bg-purple pt4">
+  <ul class="flex gap2 align-items-center justify-content-center flex-wrap mt1">
+    {% for item in site.footerButtons %}
+      <li>
+        <a class="btn btn--light" href="{{ item.url }}">{{ item.label }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <p class="bold text-center my2">
+    <a class="ext text-light" href="https://epicenter.works/datenschutz">Datenschutz</a>&nbsp;|&nbsp;<a class="ext text-light" href="https://epicenter.works/kontakt">Impressum</a>
   </p>
 </footer>
+<p class="text-light text-xs text-center font-mono m0" style="background-color: var(--black); padding: .5rem 1rem;">
+  Design: <a class="ext text-light" href="https://sahar.design">Sahar Heumesser</a>&nbsp;|&nbsp;Code: <a class="ext text-light" href="https://ttntm.me">ttntm</a>
+</p>

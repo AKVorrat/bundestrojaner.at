@@ -1,26 +1,28 @@
 <section class="my4">
-  <div class="container mx-auto">
-    <h2 class="uppercase text-center mb2">Stellungnahmen</h2>
+  <div class="container">
+    <h2 class="uppercase text-center mb2">Aktuelle Stellungnahmen</h2>
     <!-- Slider main container -->
-    <div class="swiper">
+    <div class="swiper shadow">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
-        {% for item in collections.feedback | reverse %}
-          <div class="swiper-slide">
-            <div class="feedback-slide">
-              <div class="flex gap1 align-items-center justify-content-center mb1">
-                <img class="" src="/img/logos/{{ item.data.logo }}" width="50" alt="Stellungnahme von {{ item.data.author }}">
-                <p class="bold m0">{{ item.data.author }}</p>
+        {% for item in collections.feedback %}
+          {% if item.data.featured %}
+            <div class="swiper-slide">
+              <div class="feedback-slide">
+                <div class="flex gap1 align-items-center justify-content-center mb1">
+                  <img class="" src="/img/logos/{{ item.data.logo }}" width="50" alt="Stellungnahme von {{ item.data.author }}">
+                  <p class="bold m0">{{ item.data.author }}</p>
+                </div>
+                <blockquote>
+                  {{ item.templateContent | safe }}
+                </blockquote>
+                <p class="text-center m0">
+                  <a class="ext" href="{{ item.data.source }}">Quelle</a>
+                </p>
               </div>
-              <blockquote>
-                {{ item.templateContent | safe }}
-              </blockquote>
-              <p class="text-center m0">
-                <a class="ext" href="{{ item.data.source }}">Quelle</a>
-              </p>
             </div>
-          </div>
+          {% endif %}
         {% endfor %}
       </div>
       <!-- If we need pagination -->
@@ -32,7 +34,7 @@
     </div>
     <div class="mt2">
       <p class="text-center m0">
-        <a class="btn" href="#">Alle Stellungnahmen</a>
+        <a class="btn" href="#stellungnahmen">Alle Stellungnahmen</a>
       </p>
     </div>
   </div>

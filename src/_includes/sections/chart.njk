@@ -1,24 +1,49 @@
-<section class="container py2 mx-auto">
-  <h2 class="text-center">
-    Diagramm
-  </h2>
-  <div class="grid grid2 gap2">
-    <div id="chart" style="height: 300px"></div>
-    <div>
-      <p>Text neben diagramm</p>
+<section id="stellungnahmen" class="section-chart">
+  <div class="container flex align-items-center justify-content-center gap4 mobile-column mx-auto">
+    <div class="section-chart__heading">
+      <h2 class="section-heading uppercase mb2">Stellungnahmen</h2>
+    </div>
+    <div class="section-chart__image">
+      <img class="drop-shadow" src="/img/chart.svg" alt="diagram illustration" width="200">
     </div>
   </div>
-  <style>
-    .ct-series-a .ct-slice-pie {
-      fill: #EB5757 !important;
-    }
+</section>
+<section class="bg-light mb4">
+  <div class="container pt4-md pb4">
+    <div class="grid grid2 gap2">
+      <div id="chart" style="height: 350px;"></div>
+      <ul class="block feedback__list px1m">
+        {% for item in collections.feedback %}
+          {% set verdict = 'Contra' %}
+          {% if item.data.verdict == 1 %}
+            {% set verdict = 'Pro' %}
+          {% endif %}
+          <li class="feedback__item" data-verdict="{{ item.data.verdict }}">
+            <p class="bold m0">
+              {{ item.data.author }}
+            </p>
+            <p class="text-xs m0">
+              Datum: <time datetime="{{ item.date | date('YYYY-MM-DD') }}">{{ item.date | date('DD.MM.YYYY') }}</time> | Bewertung: {{ verdict }}
+            </p>
+            <p class="text-sm m0">
+              <a class="ext" href="{{ item.data.source }}">Quelle</a>
+            </p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <style>
+      .ct-series-a .ct-slice-pie {
+        fill: #EB5757 !important;
+      }
 
-    .ct-series-b .ct-slice-pie {
-      fill: #27AE60 !important;
-    }
+      .ct-series-b .ct-slice-pie {
+        fill: #27AE60 !important;
+      }
 
-    .ct-label {
-      fill: #000000 !important;
-    }
-  </style>
+      .ct-label {
+        fill: #000000 !important;
+      }
+    </style>
+  </div>
 </section>

@@ -1,7 +1,9 @@
 ---
 order: 1
+date: 2024-08-26
 logo: placeholder150.png
 author: ACME
+verdict: 0
 source: https://example.com
 ---
 

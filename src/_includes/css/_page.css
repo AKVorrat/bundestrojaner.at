@@ -48,6 +48,7 @@
 	--font-sans: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 	/* --font-mono: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; */
 	--font-mono: monospace, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New';
+  --border-radius: .25rem;
   --text: #121212;
 }
 
@@ -85,15 +86,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, .h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h2, .h2 {
-  font-size: 1.75rem;
+  font-size: 2.25rem;
 }
 
 h3, .h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 h4, .h4 {
@@ -120,11 +121,6 @@ p b {
 i,
 em {
   font-style: italic;
-}
-
-a,
-button {
-  transition: all .35s ease;
 }
 
 a,
@@ -163,6 +159,10 @@ button {
   cursor: pointer;
 }
 
+img {
+  max-width: 100%;
+}
+
 header,
 main,
 footer {
@@ -170,13 +170,16 @@ footer {
   margin: 0 auto;
 }
 
-.container {
+.container,
+.container-args {
   margin: 0 auto;
 
   @media screen and (min-width: 1024px) {
     max-width: 768px;
   }
+}
 
+.container {
   @media screen and (min-width: 1200px) {
     max-width: 1024px;
   }
@@ -185,7 +188,6 @@ footer {
     max-width: 1200px;
   }
 }
-
 
 header {
   background: var(--purple);
@@ -199,20 +201,27 @@ header {
 header nav {
   /* background: #D3D4DD; */
   background: var(--light);
-  box-shadow: inset 0 1px 8px 0 rgba(25, 25, 25, .125);
-  padding: 1rem;
+  padding: .5rem 1rem;
 
   & .menu {
     & summary {
-      color: var(--blue);
+      background-color: transparent;
+      border-radius: var(--border-radius);
+      color: var(--purple);
       gap: .5rem;
       list-style: none;
+      padding: .25rem .75rem;
       position: relative;
+      transition: background-color .35s ease-in-out;
       user-select: none;
       width: min-content;
 
       & .icon {
         transition: transform .25s ease;
+      }
+
+      &:is(:focus, :hover) {
+        background-color: var(--white);
       }
     }
 
@@ -260,7 +269,7 @@ main {
 footer {
   background: rgba(5, 5, 5, .75);
   color: var(--light);
-  padding: 3rem 2rem;
+  padding: 3rem 2rem 0rem;
 }
 
 footer nav a {
@@ -272,9 +281,10 @@ footer nav a {
 .btn {
   color: var(--light);
   background: var(--blue);
+  border-radius: var(--border-radius);
   display: inline-block;
   font-weight: bold;
-  padding: .5rem 1.5rem;
+  padding: .625rem 1.5rem;
   text-decoration: none;
   transition-property: background-color, color;
 
@@ -283,8 +293,115 @@ footer nav a {
   }
 }
 
+.btn--light {
+  background: var(--light);
+  color: var(--blue);
+
+  &:is(:focus, :hover) {
+    background: var(--blue);
+    color: var(--light);
+  }
+}
+
+.feedback__list {
+  max-height: 350px;
+  overflow-y: auto;
+
+  & li:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.feedback__item {
+  background-color: var(--white);
+  border: 1px solid var(--purple-50);
+  border-radius: var(--border-radius);
+  padding: 1rem 1.5rem;
+}
+
+.section-heading {
+  @media screen and (min-width: 576px) {
+    border-bottom: 3px solid transparent;
+  }
+}
+
+.section-args {
+  background: linear-gradient(to bottom, var(--white) 50%, var(--purple) 50%);
+
+  & .section-heading {
+    color: var(--light);
+
+    @media screen and (min-width: 576px) {
+      color: var(--blue);
+    }
+  }
+}
+
+.section-args__list {
+  & li:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.section-args__item {
+  background-color: var(--light);
+  border-radius: var(--border-radius);
+  transition: background-color .35s ease-in-out;
+
+  &:is(:focus, :hover) {
+    background-color: white;
+  }
+
+  & summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & summary::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230071B3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M6 9l6 6l6 -6' /%3E%3C/svg%3E");
+    background-size: cover;
+    margin-left: .75em;
+    transition: 0.2s;
+  }
+
+  &[open] > summary::after {
+    transform: rotate(180deg);
+  }
+}
+
+.section-chart,
 .section-share {
   background: linear-gradient(to bottom, var(--white) 50%, var(--light) 50%);
+}
+
+.section-chart__heading {
+  order: 2;
+
+  @media screen and (min-width: 576px) {
+    order: 1;
+  }
+}
+
+.section-chart__image {
+  margin-bottom: -4rem;
+  order: 1;
+
+  @media screen and (min-width: 576px) {
+    order: 2;
+  }
+}
+
+.section-args__image,
+.section-share__image {
+  margin-bottom: -3rem;
+
+  @media screen and (min-width: 576px) {
+    margin-bottom: 0;
+  }
 }
 
 summary {
@@ -338,6 +455,38 @@ summary:active {
       content: close-quote;
       right: var(--h-spacing);
     }
+  }
+}
+
+.video-wrapper {
+  border-radius: var(--border-radius);
+  transform: scale(1.0);
+  transition: all ease 0.5s;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+
+.video-thumbnail {
+  border-radius: var(--border-radius);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+
+  & iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 

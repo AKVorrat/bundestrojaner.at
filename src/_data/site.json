@@ -10,6 +10,14 @@
       "url": "#petition"
     },
     {
+      "label": "Stellungnahmen",
+      "url": "#stellungnahmen"
+    },
+    {
+      "label": "Videos",
+      "url": "#videos"
+    },
+    {
       "label": "Argumente",
       "url": "#argumente"
     },
@@ -25,14 +33,22 @@
   "videos": [
     {
       "title": "Video 1",
+      "cover": "placeholder1280.png",
       "url": "#"
     },
     {
       "title": "Video 2",
+      "cover": "placeholder1280.png",
       "url": "#"
     },
     {
       "title": "Video 3",
+      "cover": "placeholder1280.png",
+      "url": "#"
+    },
+    {
+      "title": "Video 4",
+      "cover": "placeholder1280.png",
       "url": "#"
     }
   ],
