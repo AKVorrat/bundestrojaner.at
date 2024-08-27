@@ -4,16 +4,16 @@
       <img class="drop-shadow" src="/img/arguments.svg" alt="arguments illustration" width="200">
     </div>
     <div class="">
-      <h2 class="section-heading uppercase mb0 mb2-md">Argumente</h2>
+      <h2 class="section-heading uppercase mb0">Argumente</h2>
     </div>
   </div>
 </section>
-<section class="bg-purple mb4">
+<section class="bg-light mb4">
   <div class="container-args pt2 pb4 px1m">
     <ul class="section-args__list">
       {% for item in collections.arguments %}
         <li>
-          <details class="section-args__item px2 py1">
+          <details class="section-args__item shadow px2 py1">
             <summary class="bold text-blue">
               <h3 class="text-lg font-sans m0">
                 {{ item.data.title }}

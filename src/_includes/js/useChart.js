@@ -34,7 +34,9 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     new PieChart(chartSelector, data, {
-      labelInterpolationFnc: value => `${String(value)} (${data.series[data.labels.indexOf(String(value))]}%)`
+      labelInterpolationFnc: (value) => {
+        return `${String(value)} (${data.series[data.labels.indexOf(String(value))]}%)`
+      }
     })
   }
 })

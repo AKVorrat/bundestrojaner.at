@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import dotenv from 'dotenv'
 import { EleventyHtmlBasePlugin } from '@11ty/eleventy'
 import htmlmin from 'html-minifier'

@@ -290,6 +290,10 @@
   color: var(--light);
 }
 
+.text-white {
+  color: var(--white);
+}
+
 .text-lg {
   font-size: 1.25rem;
 }

@@ -39,8 +39,9 @@
 }
 
 :root {
-  --blue: #0071B3;
-  --purple: #25094B;
+  --blue: #318BBF;
+  --blue25: color-mix(in srgb, var(--purple), transparent 75%);
+  --purple: #110D40;
   --purple-50: color-mix(in srgb, var(--purple), transparent 50%);
 	--light: #EBEEF3;
 	--white: #fff;
@@ -86,11 +87,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, .h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 10vw, 2.5rem);
 }
 
 h2, .h2 {
-  font-size: 2.25rem;
+  font-size: clamp(1rem, 10vw, 2.25rem);
 }
 
 h3, .h3 {
@@ -123,8 +124,7 @@ em {
   font-style: italic;
 }
 
-a,
-a:active {
+a {
   color: var(--text);
   text-decoration: underline;
   transition: all .35s ease-in-out;
@@ -171,7 +171,8 @@ footer {
 }
 
 .container,
-.container-args {
+.container-args,
+.container-swiper {
   margin: 0 auto;
 
   @media screen and (min-width: 1024px) {
@@ -179,11 +180,14 @@ footer {
   }
 }
 
-.container {
-  @media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
+  .container,
+  .container-swiper {
     max-width: 1024px;
   }
+}
 
+.container {
   @media screen and (min-width: 1440px) {
     max-width: 1200px;
   }
@@ -206,7 +210,7 @@ header nav {
   & .menu {
     & summary {
       background-color: transparent;
-      border-radius: var(--border-radius);
+      /* border-radius: var(--border-radius); */
       color: var(--purple);
       gap: .5rem;
       list-style: none;
@@ -220,7 +224,7 @@ header nav {
         transition: transform .25s ease;
       }
 
-      &:is(:focus, :hover) {
+      &:is(:hover) {
         background-color: var(--white);
       }
     }
@@ -232,8 +236,9 @@ header nav {
     .nav-link {
       color: var(--blue);
       font-weight: bold;
-      text-decoration: none;
-      text-decoration-color: var(--purple-50);
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      text-decoration-thickness: 2px;
       /* text-transform: uppercase; */
 
       &:hover {
@@ -272,19 +277,21 @@ footer {
   padding: 3rem 2rem 0rem;
 }
 
-footer nav a {
-  color: var(--blue);
+footer a,
+footer a:active {
+  text-decoration: none;
 }
 
 /* SECTIONS / COMPONENTS */
 
-.btn {
+.btn,
+.btn:active {
   color: var(--light);
   background: var(--blue);
-  border-radius: var(--border-radius);
+  /* border-radius: var(--border-radius); */
   display: inline-block;
   font-weight: bold;
-  padding: .625rem 1.5rem;
+  padding: .5rem 1.5rem;
   text-decoration: none;
   transition-property: background-color, color;
 
@@ -293,7 +300,8 @@ footer nav a {
   }
 }
 
-.btn--light {
+.btn--light,
+.btn--light:active {
   background: var(--light);
   color: var(--blue);
 
@@ -310,6 +318,10 @@ footer nav a {
   & li:not(:last-child) {
     margin-bottom: 1rem;
   }
+
+  @media screen and (min-width: 576px) {
+    margin-right: .5rem;
+  }
 }
 
 .feedback__item {
@@ -320,20 +332,24 @@ footer nav a {
 }
 
 .section-heading {
+  margin-bottom: 2rem;
+
   @media screen and (min-width: 576px) {
-    border-bottom: 3px solid transparent;
+    margin-bottom: 0;
+    /* border-bottom: 3px solid transparent; */
   }
 }
 
 .section-args {
-  background: linear-gradient(to bottom, var(--white) 50%, var(--purple) 50%);
+  /* background: linear-gradient(to bottom, var(--white) 50%, var(--purple) 50%); */
 
   & .section-heading {
-    color: var(--light);
+    /* color: var(--light); */
+    margin-bottom: 0;
 
-    @media screen and (min-width: 576px) {
+    /* @media screen and (min-width: 576px) {
       color: var(--blue);
-    }
+    } */
   }
 }
 
@@ -344,25 +360,34 @@ footer nav a {
 }
 
 .section-args__item {
-  background-color: var(--light);
+  background-color: var(--white);
+  border: 1px solid var(--purple-50);
   border-radius: var(--border-radius);
-  transition: background-color .35s ease-in-out;
 
   &:is(:focus, :hover) {
-    background-color: white;
+    & summary {
+      & h3 {
+        color: var(--blue);
+      }
+    }
   }
 
   & summary {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    & h3 {
+      color: var(--purple);
+      transition: color .35s ease-in-out;
+    }
   }
 
   & summary::after {
     content: '';
     width: 24px;
     height: 24px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230071B3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M6 9l6 6l6 -6' /%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23110D40' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M6 9l6 6l6 -6' /%3E%3C/svg%3E");
     background-size: cover;
     margin-left: .75em;
     transition: 0.2s;
@@ -373,6 +398,7 @@ footer nav a {
   }
 }
 
+.section-args,
 .section-chart,
 .section-share {
   background: linear-gradient(to bottom, var(--white) 50%, var(--light) 50%);
@@ -412,12 +438,15 @@ summary {
   }
 }
 
+.btn:active,
 summary:active {
   transform: translateY(2px);
   transition: transform .125s ease;
 }
 
 .swiper {
+  --swiper-navigation-sides-offset: 1rem;
+  --swiper-navigation-size: 2rem;
   --swiper-theme-color: var(--purple-50);
 }
 
