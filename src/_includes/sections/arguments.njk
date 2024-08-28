@@ -4,12 +4,17 @@
       <img class="drop-shadow" src="/img/arguments.svg" alt="arguments illustration" width="200">
     </div>
     <div class="">
-      <h2 class="section-heading uppercase mb0">Argumente</h2>
+      <h2 class="uppercase mb0">
+        Argumente
+      </h2>
     </div>
   </div>
 </section>
 <section class="bg-light mb4">
   <div class="container-args pt2 pb4 px1m">
+    <div class="flex justify-content-center justify-content-end-md mb1" style="margin-top: -2rem;">
+      <button id="expand-args" class="btn btn--sm">Alle aufklappen</button>
+    </div>
     <ul class="section-args__list">
       {% for item in collections.arguments %}
         <li>
@@ -19,7 +24,7 @@
                 {{ item.data.title }}
               </h3>
             </summary>
-            <div class="mt1 mb0">
+            <div class="my1">
               {{ item.templateContent | safe }}
             </div>
           </details>

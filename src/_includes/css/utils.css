@@ -35,12 +35,15 @@
   }
 }
 
-
 .mobile-hidden {
   display: none;
 }
 
 @media screen and (min-width: 576px) {
+  .justify-content-end-md {
+    justify-content: flex-end;
+  }
+
   .flex-wrap-mobile {
     flex-wrap: nowrap;
   }
@@ -72,6 +75,10 @@
 
 .gap2 {
   gap: 2rem;
+}
+
+.gap3 {
+  gap: 3rem;
 }
 
 .gap4 {

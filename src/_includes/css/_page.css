@@ -110,7 +110,7 @@ h6, .h6 {
   font-size: 1rem;
 }
 
-p {
+p:not(:last-of-type) {
   margin-bottom: 1rem;
 }
 
@@ -124,10 +124,14 @@ em {
   font-style: italic;
 }
 
+a,
+button {
+  transition: all .35s ease-in-out;
+}
+
 a {
   color: var(--text);
   text-decoration: underline;
-  transition: all .35s ease-in-out;
   transition-property: color, text-decoration;
 
   &:not(:is(.btn, .resp-sharing-button__link)):is(:focus, :hover) {
@@ -180,6 +184,10 @@ footer {
   }
 }
 
+/*
+  incosistency with rules above/below due to an issue that could
+  happen based on how postCss would combine rules
+*/
 @media screen and (min-width: 1200px) {
   .container,
   .container-swiper {
@@ -203,7 +211,6 @@ header {
 }
 
 header nav {
-  /* background: #D3D4DD; */
   background: var(--light);
   padding: .5rem 1rem;
 
@@ -223,10 +230,6 @@ header nav {
       & .icon {
         transition: transform .25s ease;
       }
-
-      &:is(:hover) {
-        background-color: var(--white);
-      }
     }
 
     & summary::-webkit-details-marker {
@@ -239,7 +242,6 @@ header nav {
       text-decoration: underline;
       text-decoration-color: transparent;
       text-decoration-thickness: 2px;
-      /* text-transform: uppercase; */
 
       &:hover {
         color: var(--purple);
@@ -289,7 +291,10 @@ footer a:active {
   color: var(--light);
   background: var(--blue);
   /* border-radius: var(--border-radius); */
+  border: 0px solid transparent;
   display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 1rem;
   font-weight: bold;
   padding: .5rem 1.5rem;
   text-decoration: none;
@@ -309,6 +314,12 @@ footer a:active {
     background: var(--blue);
     color: var(--light);
   }
+}
+
+.btn--sm,
+.btn--sm:active {
+  font-size: .75rem;
+  padding: .25rem .75rem;
 }
 
 .feedback__list {
@@ -340,84 +351,16 @@ footer a:active {
   }
 }
 
-.section-args {
-  /* background: linear-gradient(to bottom, var(--white) 50%, var(--purple) 50%); */
-
-  & .section-heading {
-    /* color: var(--light); */
-    margin-bottom: 0;
-
-    /* @media screen and (min-width: 576px) {
-      color: var(--blue);
-    } */
-  }
-}
-
-.section-args__list {
-  & li:not(:last-child) {
-    margin-bottom: 2rem;
-  }
-}
-
-.section-args__item {
-  background-color: var(--white);
-  border: 1px solid var(--purple-50);
-  border-radius: var(--border-radius);
-
-  &:is(:focus, :hover) {
-    & summary {
-      & h3 {
-        color: var(--blue);
-      }
-    }
-  }
-
-  & summary {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    & h3 {
-      color: var(--purple);
-      transition: color .35s ease-in-out;
-    }
-  }
-
-  & summary::after {
-    content: '';
-    width: 24px;
-    height: 24px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23110D40' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M6 9l6 6l6 -6' /%3E%3C/svg%3E");
-    background-size: cover;
-    margin-left: .75em;
-    transition: 0.2s;
-  }
-
-  &[open] > summary::after {
-    transform: rotate(180deg);
-  }
-}
-
 .section-args,
 .section-chart,
+.section-quotes,
 .section-share {
   background: linear-gradient(to bottom, var(--white) 50%, var(--light) 50%);
 }
 
-.section-chart__heading {
-  order: 2;
-
-  @media screen and (min-width: 576px) {
-    order: 1;
-  }
-}
-
-.section-chart__image {
-  margin-bottom: -4rem;
-  order: 1;
-
-  @media screen and (min-width: 576px) {
-    order: 2;
+#expand-args {
+  @media screen and (max-width: 576px) {
+    margin-top: 1rem;
   }
 }
 
@@ -428,6 +371,98 @@ footer a:active {
   @media screen and (min-width: 576px) {
     margin-bottom: 0;
   }
+}
+
+.section-args__item {
+  background-color: var(--white);
+  border: 1px solid var(--purple-50);
+  border-radius: var(--border-radius);
+
+  & summary {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    justify-content: space-between;
+
+    & h3 {
+      color: var(--purple);
+      flex-shrink: 1;
+      line-height: 1.25;
+      transition: color .35s ease-in-out;
+    }
+  }
+
+  & summary::after {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23110D40' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M6 9l6 6l6 -6' /%3E%3C/svg%3E");
+    background-size: cover;
+    flex-shrink: 0;
+    height: 24px;
+    transition: .2s;
+    width: 24px;
+  }
+
+  &[open] > summary::after {
+    transform: rotate(180deg);
+  }
+}
+
+.section-args__list,
+.section-quotes__list {
+  & li:not(:last-child) {
+    margin-bottom: var(--mb, 2rem);
+  }
+}
+
+.section-quotes__list {
+  --mb: 3rem;
+}
+
+.section-chart__heading,
+.section-quotes__heading {
+  order: 2;
+
+  @media screen and (min-width: 576px) {
+    order: 1;
+  }
+}
+
+.section-chart__image,
+.section-quotes__image {
+  order: 1;
+
+  @media screen and (min-width: 576px) {
+    order: 2;
+  }
+}
+
+.section-chart__image {
+  margin-bottom: -4rem;
+}
+
+.section-quotes__image {
+  margin-bottom: -3rem;
+
+  @media screen and (min-width: 576px) {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.section-quotes__item {
+  background-color: var(--white);
+  border-top-right-radius: 4rem;
+  padding: 2rem 2.5rem;
+
+  @media screen and (min-width: 576px) {
+    padding: 4rem 5rem;
+  }
+}
+
+.social-icon {
+  background-color: var(--blue);
+  border-radius: 99999px;
+  padding: .5rem;
+  transition-property: background-color;
 }
 
 summary {
@@ -536,6 +571,34 @@ summary:active {
 
   100% {
     opacity: 0;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  header nav {
+    & .menu {
+      & summary {
+        &:is(:hover) {
+          background-color: var(--white);
+        }
+      }
+    }
+  }
+
+  .section-args__item {
+    &:is(:focus, :hover) {
+      & summary {
+        & h3 {
+          color: var(--blue);
+        }
+      }
+    }
+  }
+
+  .social-icon {
+    &:is(:focus, :hover) {
+      background-color: var(--light);
+    }
   }
 }
 

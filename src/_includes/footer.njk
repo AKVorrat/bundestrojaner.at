@@ -12,6 +12,15 @@
   <p class="bold text-center my2">
     <a class="ext text-light" href="https://epicenter.works/datenschutz">Datenschutz</a>&nbsp;|&nbsp;<a class="ext text-light" href="https://epicenter.works/kontakt">Impressum</a>&nbsp;|&nbsp;<a class="text-light" href="#top">&uarr;Top</a>
   </p>
+  <ul class="flex align-items-center justify-content-center flex-wrap gap1 mb2">
+    {% for item in site.footerSocial %}
+      <li class="block">
+        <a class="social-icon block" href="{{ item.url }}" target="_blank" title="{{ item.icon }}">
+          <img class="block" src="/img/icons/{{ item.icon }}.svg" width="24" alt="{{ item.icon }}">
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 </footer>
 <p class="text-light text-xs text-center font-mono m0" style="background-color: var(--black); padding: .5rem 1rem;">
   Design: <a class="ext text-light" href="https://sahar.design">Sahar Heumesser</a>&nbsp;|&nbsp;Code: <a class="ext text-light" href="https://ttntm.me">ttntm</a>

@@ -55,19 +55,49 @@
   "footerButtons": [
     {
       "label": "Newsletter",
-      "url": "#"
+      "url": "https://epicenter.works/newsletter"
     },
     {
       "label": "Mitmachen",
-      "url": "#"
+      "url": "https://epicenter.works/mitmachen"
     },
     {
       "label": "Spenden",
-      "url": "#"
+      "url": "https://spenden.epicenter.works/"
     },
     {
       "label": "Termine",
-      "url": "#"
+      "url": "https://epicenter.works/kalender"
+    }
+  ],
+  "footerSocial": [
+    {
+      "icon": "bluesky",
+      "url": "https://bsky.app/profile/epicenterworks.bsky.social"
+    },
+    {
+      "icon": "facebook",
+      "url": "https://www.facebook.com/epicenter.works"
+    },
+    {
+      "icon": "instagram",
+      "url": "https://www.instagram.com/epicenter.works/"
+    },
+    {
+      "icon": "linkedin",
+      "url": "https://at.linkedin.com/company/epicenter-works"
+    },
+    {
+      "icon": "mastodon",
+      "url": "https://chaos.social/@epicenter_works"
+    },
+    {
+      "icon": "twitter",
+      "url": "https://twitter.com/epicenter_works"
+    },
+    {
+      "icon": "youtube",
+      "url": "https://www.youtube.com/channel/UCuJdlEU2UwfB4LopQWbsFuA"
     }
   ]
 }
