@@ -13,18 +13,18 @@
 <section class="bg-light mb4">
   <div class="container-args pt2 pb4 px1m">
     <div class="flex justify-content-center justify-content-end-md mb1" style="margin-top: -2rem;">
-      <button id="expand-args" class="btn btn--sm">Alle aufklappen</button>
+      <button id="expand-args" class="btn btn--purple btn--sm">Alle aufklappen</button>
     </div>
     <ul class="section-args__list">
       {% for item in collections.arguments %}
         <li>
-          <details class="section-args__item shadow px2 py1">
+          <details class="section-args__item shadow">
             <summary class="bold text-blue">
               <h3 class="text-lg font-sans m0">
                 {{ item.data.title }}
               </h3>
             </summary>
-            <div class="my1">
+            <div class="inner px2 pb2 py1 my1">
               {{ item.templateContent | safe }}
             </div>
           </details>

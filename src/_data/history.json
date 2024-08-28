@@ -1,0 +1,42 @@
+[
+  {
+    "year": 2024,
+    "entries": [
+      {
+        "month": "August",
+        "content": "This is now, not much to say..."
+      },
+      {
+        "month": "July",
+        "content": "This was last month. Summer - it was hot!"
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "entries": [
+      {
+        "month": "March",
+        "content": "Something that happened more than a year ago."
+      }
+    ]
+  },
+  {
+    "year": 2018,
+    "entries": [
+      {
+        "month": "October",
+        "content": "Something that happened a long time ago."
+      }
+    ]
+  },
+  {
+    "year": 2012,
+    "entries": [
+      {
+        "month": "December",
+        "content": "Something that happened a very long time ago."
+      }
+    ]
+  }
+]

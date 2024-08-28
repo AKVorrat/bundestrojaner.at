@@ -1,8 +1,36 @@
-<section id="history" class="container py2">
-  <h2 class="text-center">
-    History/Timeline
-  </h2>
-  <div class="text-center">
-    <p>history/timeline goes here</p>
+<section class="">
+  <div class="flex flex-column bg-purple align-items-center text-white px1m py4">
+    <img id="history" class="drop-shadow" src="/img/bt_icon.svg" width="125" alt="bundestrojaner illustration" style="margin-top: -8rem;">
+    <h2 class="uppercase text-center text-light mt1 mb0">
+      Bundestrojaner History
+    </h2>
+  </div>
+  <div class="timeline-icon">
+    <img class="drop-shadow" src="/img/history.svg" width="200" alt="history illustration">
+  </div>
+  <div class="container-timeline py2">
+    <div class="timeline">
+      {% for item in history %}
+        <div class="timeline__marker">
+          <h3 class="m0">
+            {{ item.year }}
+          </h3>
+        </div>
+        <div class="timeline__year">
+          <ul>
+            {% for record in item.entries %}
+              <li class="timeline__month">
+                <h4>
+                  {{ record.month }}
+                </h4>
+                <p>
+                  {{ record.content }}
+                </p>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </section>

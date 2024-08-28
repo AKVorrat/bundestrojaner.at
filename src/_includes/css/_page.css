@@ -176,7 +176,9 @@ footer {
 
 .container,
 .container-args,
-.container-swiper {
+.container-petition,
+.container-swiper,
+.container-timeline {
   margin: 0 auto;
 
   @media screen and (min-width: 1024px) {
@@ -190,6 +192,7 @@ footer {
 */
 @media screen and (min-width: 1200px) {
   .container,
+  .container-petition,
   .container-swiper {
     max-width: 1024px;
   }
@@ -316,6 +319,17 @@ footer a:active {
   }
 }
 
+.btn--purple,
+.btn--purple:active {
+  background: var(--purple);
+  color: var(--light);
+
+  &:is(:focus, :hover) {
+    background: var(--blue);
+    color: var(--light);
+  }
+}
+
 .btn--sm,
 .btn--sm:active {
   font-size: .75rem;
@@ -375,26 +389,30 @@ footer a:active {
 
 .section-args__item {
   background-color: var(--white);
-  border: 1px solid var(--purple-50);
   border-radius: var(--border-radius);
 
   & summary {
-    display: flex;
     align-items: flex-start;
+    background-color: var(--purple);
+    /* border: 1px solid var(--purple-50); */
+    border-radius: var(--border-radius);
+    display: flex;
     gap: 1rem;
     justify-content: space-between;
+    opacity: 1;
+    padding: 1rem 2rem;
+    transition: opacity .35s ease-in-out;
 
     & h3 {
-      color: var(--purple);
+      color: var(--light);
       flex-shrink: 1;
       line-height: 1.25;
-      transition: color .35s ease-in-out;
     }
   }
 
   & summary::after {
     content: '';
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23110D40' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M6 9l6 6l6 -6' /%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23EBEEF3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M6 9l6 6l6 -6' /%3E%3C/svg%3E");
     background-size: cover;
     flex-shrink: 0;
     height: 24px;
@@ -402,8 +420,21 @@ footer a:active {
     width: 24px;
   }
 
-  &[open] > summary::after {
-    transform: rotate(180deg);
+  & .inner {
+    animation: fadeIn .75s linear forwards;
+  }
+
+  &[open] > summary {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:not([open]) .inner {
+    animation: fadeOut .75s linear forwards;
   }
 }
 
@@ -451,6 +482,7 @@ footer a:active {
 .section-quotes__item {
   background-color: var(--white);
   border-top-right-radius: 4rem;
+  border-bottom-left-radius: 4rem;
   padding: 2rem 2.5rem;
 
   @media screen and (min-width: 576px) {
@@ -540,6 +572,83 @@ summary:active {
   }
 }
 
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  & .timeline__marker h3 {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 576px) {
+    grid-template-columns: 150px 1fr;
+
+    & .timeline__marker {
+      border-right: 2px solid var(--blue);
+
+      & h3 {
+        /* border-bottom: 2px solid var(--blue); */
+        padding-right: 2rem;
+        text-align: right;
+      }
+    }
+  }
+
+  & .timeline__year {
+    border-top: 1px solid var(--blue);
+    padding: 0 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 1rem;
+    }
+
+    & ul {
+      & li h4 {
+        color: var(--purple);
+      }
+
+      & li:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  & .timeline__month {
+    background-color: var(--light);
+    border-bottom-right-radius: 1rem;
+    padding: 1.5rem 2rem;
+  }
+}
+
+.timeline-icon {
+  padding-top: 1rem;
+  position: relative;
+
+  & img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 576px) {
+    padding-top: 0;
+
+    & img {
+      left: -70%;
+      position: absolute;
+      right: 0;
+      top: -4.3rem;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & img {
+      left: -50%;
+    }
+  }
+}
+
 .video {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
@@ -575,23 +684,15 @@ summary:active {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  header nav {
-    & .menu {
-      & summary {
-        &:is(:hover) {
-          background-color: var(--white);
-        }
-      }
+  header nav .menu summary {
+    &:is(:hover) {
+      background-color: var(--white);
     }
   }
 
-  .section-args__item {
+  .section-args__item:not([open]) summary {
     &:is(:focus, :hover) {
-      & summary {
-        & h3 {
-          color: var(--blue);
-        }
-      }
+      opacity: .75;
     }
   }
 
