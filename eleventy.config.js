@@ -12,6 +12,10 @@ const isProdDeployment = Boolean(
   && process.env.ELEVENTY_RUN_MODE === 'build'
 )
 
+function sortByOrder(a, b) {
+  return a.data.order - b.data.order
+}
+
 export default async function(config) {
   // PLUGINS
   config.addPlugin(EleventyHtmlBasePlugin)
@@ -54,16 +58,17 @@ export default async function(config) {
   // COLLECTIONS
   config.addCollection('arguments', async(collection) => {
     return collection.getFilteredByGlob('./src/arguments/**/*.md')
-      .sort((a, b) => a.data.order - b.data.order)
+      .sort(sortByOrder)
   })
 
   config.addCollection('feedback', async(collection) => {
     return collection.getFilteredByGlob('./src/feedback/**/*.md')
-      .sort((a, b) => a.data.order - b.data.order)
+      .sort(sortByOrder)
   })
 
   config.addCollection('quotes', async(collection) => {
     return collection.getFilteredByGlob('./src/quotes/**/*.md')
+      .sort(sortByOrder)
   })
 
   // STATIC FILES
