@@ -5,12 +5,16 @@
   <ul class="flex gap2 align-items-center justify-content-center flex-wrap mt1">
     {% for item in site.footerButtons %}
       <li>
-        <a class="btn btn--light" href="{{ item.url }}">{{ item.label }}</a>
+        <a class="btn btn--outline" href="{{ item.url }}">{{ item.label }}</a>
       </li>
     {% endfor %}
   </ul>
-  <p class="bold text-center my2">
+  <p class="text-center my2">
+    bundestrojaner.at &mdash; Eine Kampagne von <a class="ext text-light" href="https://epicenter.works">epicenter.works</a>
+    <br>
     <a class="ext text-light" href="https://epicenter.works/datenschutz">Datenschutz</a>&nbsp;|&nbsp;<a class="ext text-light" href="https://epicenter.works/kontakt">Impressum</a>
+    <br>
+    Lizenz: <a class="ext text-light" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
   </p>
   <ul class="flex align-items-center justify-content-center flex-wrap gap1 mb2 mx-auto" style="max-width: 70%;">
     {% for item in site.footerSocial %}

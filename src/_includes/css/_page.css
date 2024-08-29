@@ -319,6 +319,19 @@ footer a:active {
   }
 }
 
+.btn--outline,
+.btn--outline:active {
+  background: transparent;
+  border-color: var(--blue);
+  border-width: 1px;
+  color: var(--blue);
+
+  &:is(:focus, :hover) {
+    background: var(--blue);
+    color: var(--light);
+  }
+}
+
 .btn--purple,
 .btn--purple:active {
   background: var(--purple);
@@ -419,14 +432,6 @@ footer a:active {
 .feedback__list {
   max-height: 350px;
   overflow-y: auto;
-
-  & li:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-
-  @media screen and (min-width: 576px) {
-    margin-right: .5rem;
-  }
 }
 
 .feedback__item {
@@ -434,6 +439,14 @@ footer a:active {
   border: 1px solid var(--purple-50);
   border-radius: var(--border-radius);
   padding: 1rem 1.5rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  @media screen and (min-width: 576px) {
+    margin-right: .75rem;
+  }
 }
 
 .section-heading {
@@ -767,6 +780,12 @@ summary:active {
   header nav .menu summary {
     &:is(:hover) {
       background-color: var(--white);
+    }
+  }
+
+  footer a:not(.btn, .social-icon) {
+    &:is(:focus, :hover) {
+      text-decoration: underline;
     }
   }
 
