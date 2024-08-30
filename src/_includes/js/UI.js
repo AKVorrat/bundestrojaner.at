@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Arguments: expand/collapse button
   const btnExpandArgs = document.getElementById('expand-args')
-  const itemsArgs = document.querySelectorAll('.section-args__item')
+  const listArgs = document.querySelectorAll('.section-args__item')
   const state = {
     expanded: false
   }
@@ -39,11 +39,11 @@ window.addEventListener('DOMContentLoaded', () => {
   if (
     btnExpandArgs
     && btnExpandArgs instanceof HTMLButtonElement
-    &&  itemsArgs.length > 0
+    && listArgs.length > 0
   ) {
     btnExpandArgs.addEventListener('click', (e) => {
       if (!state.expanded) {
-        itemsArgs.forEach((el) => {
+        listArgs.forEach((el) => {
           el.setAttribute('open', '')
         })
 
@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         state.expanded = true
       } else {
-        itemsArgs.forEach((el) => {
+        listArgs.forEach((el) => {
           el.removeAttribute('open')
         })
 
