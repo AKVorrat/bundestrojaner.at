@@ -14,6 +14,18 @@ function useDebounce(callback, wait) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+  // Menu
+  const menu = document.querySelector('.menu')
+  const notAPhone = window.matchMedia('(min-width: 768px)')
+
+  if (
+    menu
+    && menu instanceof HTMLElement
+    && notAPhone.matches
+  ) {
+    menu.setAttribute('open', '')
+  }
+
   // BTT button
   const btnBtt = document.querySelector('.btn-btt')
 

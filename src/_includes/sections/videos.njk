@@ -2,17 +2,38 @@
   <img src="/img/bt_illustration_big.svg" width="500" alt="bundestrojaner illustration" style="margin-bottom: -1.25rem;">
 </div>
 <section class="bg-light mb4">
-  <div class="container pt2 pb4 px1m">
+  <div class="container-sm pt2 pb4 px1m">
     <h2 class="uppercase text-center mb2">
       Videos
     </h2>
-    <ul class="grid grid2 gap2">
+    <!-- Slider main container -->
+    <div class="swiper swiper-videos">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        {% for item in site.videos %}
+          <div class="swiper-slide">
+            <div class="video-wrapper block">
+              <img id="video-thumb" class="block video-thumbnail w100 mx-auto" src="/img/{{ item.cover }}" width="350" alt="{{ item.title }}" title="Play Video" loading="lazy" decoding="async">
+              <div class="video" style="display: none;" data-video-id="vid{{ loop.index }}" data-video-url="{{ item.url }}"></div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      {# <!-- If we need pagination -->
+      <div class="swiper-pagination mt2"></div> #}
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    {# <ul class="grid grid2 gap2">
       {% for item in site.videos %}
         <li class="video-wrapper block shadow">
           <img id="video-thumb" class="block video-thumbnail w100" src="/img/{{ item.cover }}" width="350" alt="{{ item.title }}" title="Play Video" loading="lazy" decoding="async">
           <div class="video" style="display: none;" data-video-id="vid{{ loop.index }}" data-video-url="{{ item.url }}"></div>
         </li>
       {% endfor %}
-    </ul>
+    </ul> #}
   </div>
 </section>
