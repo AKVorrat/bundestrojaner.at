@@ -175,10 +175,8 @@ footer {
 }
 
 .container,
-.container-args,
-.container-petition,
-.container-swiper,
-.container-timeline {
+.container-md,
+.container-sm {
   margin: 0 auto;
 
   @media screen and (min-width: 1024px) {
@@ -192,8 +190,7 @@ footer {
 */
 @media screen and (min-width: 1200px) {
   .container,
-  .container-petition,
-  .container-swiper {
+  .container-md {
     max-width: 1024px;
   }
 }
@@ -374,7 +371,8 @@ footer a:active {
     display: none;
   }
 
-  & a {
+  & a,
+  & a:active {
     color: var(--light);
     max-width: 100%;
     padding: 1rem;
