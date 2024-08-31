@@ -81,6 +81,12 @@
   gap: 2rem;
 }
 
+.gap2-md {
+  @media screen and (min-width: 576px) {
+    gap: 2rem;
+  }
+}
+
 .gap3 {
   gap: 3rem;
 }
