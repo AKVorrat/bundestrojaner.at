@@ -30,6 +30,36 @@
       "url": "#history"
     }
   ],
+  "shareButtons": [
+    {
+      "icon": "email",
+      "url": "mailto:?subject=bundestrojaner.at&amp;body=https%3A%2F%2Fbundestrojaner.at"
+    },
+    {
+      "icon": "facebook",
+      "url": "https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbundestrojaner.at"
+    },
+    {
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fbundestrojaner.at&amp;title=https%3A%2F%2Fbundestrojaner.at&amp;summary=bundestrojaner.at&amp;source=https%3A%2F%2Fbundestrojaner.at"
+    },
+    {
+      "icon": "reddit",
+      "url": "https://reddit.com/submit/?url=https%3A%2F%2Fbundestrojaner.at&amp;resubmit=true&amp;title=bundestrojaner.at"
+    },
+    {
+      "icon": "telegram",
+      "url": "https://telegram.me/share/url?text=https%3A%2F%2Fbundestrojaner.at&amp;url=https%3A%2F%2Fbundestrojaner.at"
+    },
+    {
+      "icon": "twitter",
+      "url": "https://twitter.com/intent/tweet/?text=bundestrojaner.at&amp;url=https%3A%2F%2Fbundestrojaner.at"
+    },
+    {
+      "icon": "whatsapp",
+      "url": "whatsapp://send?text=https%3A%2F%2Fbundestrojaner.at"
+    }
+  ],
   "videos": [
     {
       "title": "Video 1",

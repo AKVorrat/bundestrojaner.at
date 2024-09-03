@@ -1,17 +1,15 @@
-<section id="zitate" class="section-quotes">
-  <div class="container flex align-items-center justify-content-center gap4 mobile-column mx-auto">
-    <div class="section-quotes__heading">
-      <h2 class="section-heading uppercase">
+<section id="zitate" class="section-quotes bg-purple">
+  <div class="container flex flex-column align-items-center justify-content-center gap4">
+    <div class="section-quotes__image mx-auto">
+      <img class="block drop-shadow mx-auto" src="/img/quotes.svg" alt="quotes illustration" width="200">
+      <h2 class="text-light uppercase text-center px1m mt1 mb2">
         Zitate aus der Politik
       </h2>
     </div>
-    <div class="section-quotes__image">
-      <img class="drop-shadow" src="/img/quotes.svg" alt="quotes illustration" width="200">
-    </div>
   </div>
 </section>
-<section class="bg-light pb4">
-  <div class="container-md pt2 pb4 px1m">
+<section class="bg-purple py4">
+  <div class="container-md pb4 px1m">
     <ul class="section-quotes__list">
       {% for item in collections.quotes %}
         <li class="section-quotes__item">

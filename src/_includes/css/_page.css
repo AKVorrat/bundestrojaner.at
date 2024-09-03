@@ -1,5 +1,4 @@
 @import './reset.css';
-@import './sharingbuttons.css';
 @import './utils.css';
 
 /* open-sans-regular - latin */
@@ -40,14 +39,14 @@
 
 :root {
   --blue: #318BBF;
-  --blue25: color-mix(in srgb, var(--purple), transparent 75%);
+  --blue50: color-mix(in srgb, var(--blue), transparent 50%);
   --purple: #110D40;
-  --purple-50: color-mix(in srgb, var(--purple), transparent 50%);
+  --purple25: color-mix(in srgb, var(--purple), transparent 75%);
+  --purple50: color-mix(in srgb, var(--purple), transparent 50%);
 	--light: #EBEEF3;
 	--white: #fff;
 	--black: #000;
 	--font-sans: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-	/* --font-mono: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; */
 	--font-mono: monospace, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New';
   --border-radius: .25rem;
   --text: #121212;
@@ -66,7 +65,6 @@ html, body {
 
 html {
   font-family: var(--font-sans);
-  /* scroll-padding-top: 1rem; */
 }
 
 body {
@@ -206,19 +204,18 @@ header {
   color: var(--light);
 
   & .header-logo {
-    padding: 2rem;
+    padding: 2rem 2rem .5rem;
   }
 }
 
 header nav {
-  background: var(--light);
   padding: .5rem 1rem;
 
   & .menu {
     & summary {
       background-color: transparent;
       /* border-radius: var(--border-radius); */
-      color: var(--purple);
+      color: var(--light);
       gap: .5rem;
       list-style: none;
       padding: .25rem .75rem;
@@ -228,6 +225,7 @@ header nav {
       width: min-content;
 
       & .icon {
+        color: var(--blue);
         transition: transform .2s ease;
       }
     }
@@ -244,9 +242,9 @@ header nav {
       text-decoration-thickness: 2px;
 
       &:hover {
-        color: var(--purple);
+        color: var(--light);
         text-decoration: underline;
-        text-decoration-color: var(--purple-50);
+        text-decoration-color: var(--blue50);
         text-decoration-thickness: 2px;
       }
     }
@@ -290,7 +288,6 @@ footer a:active {
 .btn:active {
   color: var(--light);
   background: var(--blue);
-  /* border-radius: var(--border-radius); */
   border: 0px solid transparent;
   display: inline-block;
   font-family: var(--font-sans);
@@ -433,7 +430,7 @@ footer a:active {
   width: 100%;
 
   @media screen and (min-width: 576px) {
-    height: 350px;
+    height: 300px;
   }
 }
 
@@ -444,7 +441,7 @@ footer a:active {
 
 .feedback__item {
   background-color: var(--white);
-  border: 1px solid var(--purple-50);
+  border: 1px solid var(--purple50);
   border-radius: var(--border-radius);
   padding: 1rem 1.5rem;
 
@@ -462,15 +459,7 @@ footer a:active {
 
   @media screen and (min-width: 576px) {
     margin-bottom: 0;
-    /* border-bottom: 3px solid transparent; */
   }
-}
-
-.section-args,
-.section-chart,
-.section-quotes,
-.section-share {
-  background: linear-gradient(to bottom, var(--white) 50%, var(--light) 50%);
 }
 
 #expand-args {
@@ -495,7 +484,6 @@ footer a:active {
   & summary {
     align-items: flex-start;
     background-color: var(--purple);
-    /* border: 1px solid var(--purple-50); */
     border-radius: var(--border-radius);
     display: flex;
     gap: 1rem;
@@ -550,44 +538,41 @@ footer a:active {
   --mb: 3rem;
 }
 
-.section-chart__heading,
-.section-quotes__heading {
-  order: 2;
-
-  @media screen and (min-width: 576px) {
-    order: 1;
-  }
-}
-
-.section-chart__image,
-.section-quotes__image {
-  order: 1;
-
-  @media screen and (min-width: 576px) {
-    order: 2;
-  }
-}
-
 .section-chart__image {
   margin-bottom: -4rem;
 }
 
-.section-quotes__image {
-  margin-bottom: -3rem;
+.section-feedback {
+  background: linear-gradient(to bottom right, var(--purple25), transparent, var(--purple25)), url('/img/backdrop.png') center center no-repeat;
+  background-size: cover;
+}
 
-  @media screen and (min-width: 576px) {
-    margin-bottom: 2.5rem;
-  }
+.section-quotes {
+  background: linear-gradient(to bottom, var(--light) 50%, var(--purple) 50%);
+}
+
+.section-quotes__image {
+  margin-bottom: -4rem;
 }
 
 .section-quotes__item {
-  background-color: var(--white);
+  background-color: var(--light);
   border-top-right-radius: 4rem;
   border-bottom-left-radius: 4rem;
   padding: 2rem 2.5rem;
 
   @media screen and (min-width: 576px) {
     padding: 4rem 5rem;
+  }
+}
+
+.section-share {
+  background: linear-gradient(to bottom, var(--white) 50%, var(--purple) 50%);
+}
+
+.section-share__buttons {
+  @media screen and (max-width: 576px) {
+    max-width: 70%;
   }
 }
 
@@ -615,14 +600,14 @@ summary:active {
 .swiper {
   --swiper-navigation-sides-offset: 1rem;
   --swiper-navigation-size: 2rem;
-  --swiper-theme-color: var(--purple-50);
+  --swiper-theme-color: var(--purple);
 }
 
 .swiper-slide {
   & .feedback-slide {
     --h-spacing: 1rem;
 
-    background: var(--light);
+    background: var(--white);
     padding: 3rem 4rem;
     padding-bottom: 4rem;
 
@@ -803,7 +788,7 @@ summary:active {
 @media (hover: hover) and (pointer: fine) {
   header nav .menu summary {
     &:is(:hover) {
-      background-color: var(--white);
+      background-color: var(--blue50);
     }
   }
 

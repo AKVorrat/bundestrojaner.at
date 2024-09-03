@@ -160,6 +160,10 @@
   padding-bottom: 2rem;
 }
 
+.pt3 {
+  padding-top: 3rem;
+}
+
 .pt4 {
   padding-top: 4rem;
 }
@@ -305,6 +309,10 @@
 
 .text-light {
   color: var(--light);
+}
+
+.text-purple {
+  color: var(--purple);
 }
 
 .text-white {
