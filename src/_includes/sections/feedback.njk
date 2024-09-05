@@ -11,17 +11,19 @@
         {% for item in collections.feedback %}
           {% if item.data.featured %}
             <div class="swiper-slide">
-              <div class="feedback-slide">
-                <div class="flex gap1 align-items-center justify-content-center mobile-column mb1">
-                  <img class="" src="/img/logos/{{ item.data.logo }}" width="50" alt="Stellungnahme von {{ item.data.author }}">
-                  <p class="bold m0">{{ item.data.author }}</p>
+              <div class="feedback-slide flex align-items-center">
+                <div class="feedback-slide__inner" style="align-self: center;">
+                  <div class="flex gap1 align-items-center justify-content-center mobile-column mb1">
+                    <img class="" src="/img/logos/{{ item.data.logo }}" width="50" alt="Stellungnahme von {{ item.data.author }}">
+                    <p class="bold m0">{{ item.data.author }}</p>
+                  </div>
+                  <blockquote>
+                    {{ item.templateContent | safe }}
+                  </blockquote>
+                  <p class="text-center mt1 mb0">
+                    <a class="ext" href="{{ item.data.source }}">Quelle</a>
+                  </p>
                 </div>
-                <blockquote>
-                  {{ item.templateContent | safe }}
-                </blockquote>
-                <p class="text-center m0">
-                  <a class="ext" href="{{ item.data.source }}">Quelle</a>
-                </p>
               </div>
             </div>
           {% endif %}

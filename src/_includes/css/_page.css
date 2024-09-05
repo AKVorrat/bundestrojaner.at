@@ -540,6 +540,10 @@ footer a:active {
 
 .section-chart__image {
   margin-bottom: -4rem;
+
+  & img {
+    transform: rotateY(180deg);
+  }
 }
 
 .section-feedback {
@@ -572,7 +576,7 @@ footer a:active {
 
 .section-share__buttons {
   @media screen and (max-width: 576px) {
-    max-width: 70%;
+    max-width: 60%;
   }
 }
 
@@ -603,13 +607,18 @@ summary:active {
   --swiper-theme-color: var(--purple);
 }
 
+.swiper-videos {
+  --swiper-theme-color: var(--blue);
+}
+
 .swiper-slide {
+  height: auto !important;
+
   & .feedback-slide {
     --h-spacing: 1rem;
 
     background: var(--white);
-    padding: 3rem 4rem;
-    padding-bottom: 4rem;
+    height: 100%;
 
     @media screen and (min-width: 1024px) {
       --h-spacing: 3rem;
@@ -636,6 +645,14 @@ summary:active {
       bottom: -3rem;
       content: close-quote;
       right: var(--h-spacing);
+    }
+
+    & .feedback-slide__inner {
+      padding: 3rem 4rem 4rem;
+
+      @media screen and (min-width: 1024px) {
+        padding: 3rem 6rem 4rem;
+      }
     }
   }
 }
@@ -808,6 +825,24 @@ summary:active {
     &:is(:focus, :hover) {
       background-color: var(--light);
     }
+  }
+}
+
+@media (prefers-reduced-motion) {
+  *:not(.swiper, [class*="swiper-"]),
+  *:not(.swiper, [class*="swiper-"])::before,
+  *:not(.swiper, [class*="swiper-"])::after {
+    animation: none;
+    scroll-behavior: auto !important;
+    transition: none !important;
+    transition-duration: 0ms !important;
+  }
+
+  *:not(.swiper, [class*="swiper-"]):active,
+  *:not(.swiper, [class*="swiper-"]):hover {
+    transform: none !important;
+    transition: none !important;
+    transition-duration: 0ms !important;
   }
 }
 

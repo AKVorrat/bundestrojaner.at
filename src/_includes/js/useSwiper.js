@@ -5,6 +5,10 @@ window.addEventListener('DOMContentLoaded', () => {
   if (swiperFeedback && swiperFeedback instanceof HTMLElement) {
     const swiper = new Swiper('.swiper-feedback', {
       // Optional parameters
+      autoplay: {
+        delay: 2000,
+        pauseOnMouseEnter: true
+      },
       direction: 'horizontal',
       grabCursor: true,
       loop: true,
@@ -16,6 +20,18 @@ window.addEventListener('DOMContentLoaded', () => {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
+      },
+      on: {
+        afterInit: function(s) {
+          const reducedMotionPref = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true
+            || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true
+
+          if (!!reducedMotionPref) {
+            s.autoplay.stop()
+          } else {
+            s.autoplay.start()
+          }
+        }
       }
     })
   }
