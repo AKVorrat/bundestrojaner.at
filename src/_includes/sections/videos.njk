@@ -14,26 +14,16 @@
         {% for item in site.videos %}
           <div class="swiper-slide">
             <div class="video-wrapper block">
-              <img id="video-thumb" class="block video-thumbnail w100 mx-auto" src="/img/{{ item.cover }}" width="350" alt="{{ item.title }}" title="Play Video" loading="lazy" decoding="async">
-              <div class="video" style="display: none;" data-video-id="vid{{ loop.index }}" data-video-url="{{ item.url }}"></div>
+              <div class="video">
+                <iframe src="{{ item.url }}" title="{{ item.title }}" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
         {% endfor %}
       </div>
-      {# <!-- If we need pagination -->
-      <div class="swiper-pagination mt2"></div> #}
-
-      <!-- If we need navigation buttons -->
+      <!-- Swiper navigation buttons -->
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
-    {# <ul class="grid grid2 gap2">
-      {% for item in site.videos %}
-        <li class="video-wrapper block shadow">
-          <img id="video-thumb" class="block video-thumbnail w100" src="/img/{{ item.cover }}" width="350" alt="{{ item.title }}" title="Play Video" loading="lazy" decoding="async">
-          <div class="video" style="display: none;" data-video-id="vid{{ loop.index }}" data-video-url="{{ item.url }}"></div>
-        </li>
-      {% endfor %}
-    </ul> #}
   </div>
 </section>

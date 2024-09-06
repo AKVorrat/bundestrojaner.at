@@ -62,24 +62,24 @@
   ],
   "videos": [
     {
-      "title": "Video 1",
+      "title": "Terrorbekämpfung",
       "cover": "placeholder1280.png",
-      "url": "#"
+      "url": "https://www.youtube-nocookie.com/embed/ylluwetQEkQ"
     },
     {
-      "title": "Video 2",
+      "title": "Wundermittel",
       "cover": "placeholder720.png",
-      "url": "#"
+      "url": "https://www.youtube-nocookie.com/embed/ImHRrETVuJY"
     },
     {
-      "title": "Video 3",
-      "cover": "placeholder1280.png",
-      "url": "#"
-    },
-    {
-      "title": "Video 4",
+      "title": "Secure Messaging (and current attacks against it)",
       "cover": "placeholder720.png",
-      "url": "#"
+      "url": "https://media.ccc.de/v/secure-messaging-and-current-attacks-against-it/oembed"
+    },
+    {
+      "title": "Ars Boni 518 Messengerüberwachung",
+      "cover": "placeholder720.png",
+      "url": "https://www.youtube-nocookie.com/embed/OmdOMiUMAWw"
     }
   ],
   "footerButtons": [

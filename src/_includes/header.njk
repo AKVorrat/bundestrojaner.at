@@ -1,9 +1,13 @@
 <header>
   <div class="header-logo">
-    <div class="header-logo__inner flex gap2 mobile-column align-items-center justify-content-center">
+    <div class="header-logo__inner flex gap2 mobile-column align-items-center justify-content-center mx-auto">
       <img class="block" src="/img/bt_icon.svg" width="125" alt="bundestrojaner icon">
-      <h1 class="uppercase text-light m0">
-        {{ site.title }}
+      <h1 class="text-light m0">
+        {% if isFront %}
+          {{ title }}
+        {% else %}
+          <span class="uppercase">{{ site.title }}</span>
+        {% endif %}
       </h1>
     </div>
   </div>

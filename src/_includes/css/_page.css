@@ -204,7 +204,26 @@ header {
   color: var(--light);
 
   & .header-logo {
+    padding: 2rem;
+  }
+
+  & .header-logo__inner {
+    max-width: 720px;
+
+    @media screen and (max-width: 576px) {
+      & h1 {
+        font-size: clamp(1rem, 10vw, 1.825rem);
+        text-align: center;
+      }
+    }
+  }
+
+  &:has(nav) .header-logo {
     padding: 2rem 2rem .5rem;
+
+    & .header-logo__inner {
+      max-width: 576px;
+    }
   }
 }
 
@@ -609,6 +628,10 @@ summary:active {
 
 .swiper-videos {
   --swiper-theme-color: var(--blue);
+
+  @media screen and (min-width: 576px) {
+    --swiper-navigation-size: 3rem;
+  }
 }
 
 .swiper-slide {
@@ -749,37 +772,7 @@ summary:active {
 }
 
 .video-wrapper {
-  border-radius: var(--border-radius);
-  max-height: 250px;
-  transform: scale(1.0);
-  transition: all ease 0.5s;
-
-  &:hover {
-    transform: scale(0.95);
-  }
-}
-
-.video-thumbnail {
-  border-radius: var(--border-radius);
-  height: 250px;
-  max-height: 250px;
-  object-fit: cover;
-  width: 100%;
-
-  @media screen and (min-width: 576px) {
-    object-fit: initial;
-    width: auto;
-  }
-}
-
-.video-wrapper,
-.video-thumbnail {
-  @media screen and (min-width: 576px) {
-    --dsktp-height: 450px;
-
-    height: var(--dsktp-height);
-    max-height: var(--dsktp-height);
-  }
+  height: auto;
 }
 
 @keyframes fadeIn {
