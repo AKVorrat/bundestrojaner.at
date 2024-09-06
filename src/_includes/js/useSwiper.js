@@ -21,8 +21,8 @@ window.addEventListener('DOMContentLoaded', () => {
       },
       on: {
         afterInit: function(s) {
-          const reducedMotionPref = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true
-            || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true
+          const reducedMotionPref = window.matchMedia('(prefers-reduced-motion: reduce)') === true
+            || window.matchMedia('(prefers-reduced-motion: reduce)').matches === true
 
           if (!!reducedMotionPref) {
             s.autoplay.stop()
@@ -44,6 +44,25 @@ window.addEventListener('DOMContentLoaded', () => {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
+      },
+      on: {
+        slideChange: function(s) {
+          const videoFrames = document.querySelectorAll('.video__iframe')
+
+          if (videoFrames && videoFrames.length > 0) {
+            videoFrames.forEach((f) => {
+              if (
+                f instanceof HTMLIFrameElement
+                && f.closest('.swiper-slide-active') !== null
+              ) {
+                // changing frame source stops a playing video
+                // without having to rely on any 3rd party API
+                f.src = f.src
+              }
+            })
+          }
+
+        }
       }
     })
   }
