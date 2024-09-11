@@ -565,13 +565,17 @@ footer a:active {
   }
 }
 
+.section-donate {
+  background: linear-gradient(to bottom, var(--purple) 50%, var(--light) 50%);
+}
+
 .section-feedback {
   background: linear-gradient(to bottom right, var(--purple25), transparent, var(--purple25)), url('/img/backdrop.png') center center no-repeat;
   background-size: cover;
 }
 
 .section-quotes {
-  background: linear-gradient(to bottom, var(--light) 50%, var(--purple) 50%);
+  background: linear-gradient(to bottom, var(--white) 50%, var(--purple) 50%);
 }
 
 .section-quotes__image {

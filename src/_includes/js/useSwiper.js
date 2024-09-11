@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const swiper = new Swiper('.swiper-feedback', {
       autoplay: {
         delay: 2000,
+        disableOnInteraction: true,
         pauseOnMouseEnter: true
       },
       direction: 'horizontal',
