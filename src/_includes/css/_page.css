@@ -138,7 +138,7 @@ a {
 }
 
 a[href^="https://"].ext {
-  display: inline-block;
+  /* display: inline-block; */
 
   &:not(:has(img))::after {
     --size: .875em;
@@ -716,12 +716,13 @@ summary:active {
       margin-bottom: 1rem;
     }
 
-    & ul {
-      & li h4 {
+    & > ul {
+      & li h4,
+      & li h5 {
         color: var(--purple);
       }
 
-      & li:not(:last-child) {
+      & > li:not(:last-child) {
         margin-bottom: 2rem;
       }
     }
@@ -731,6 +732,11 @@ summary:active {
     background-color: var(--light);
     border-bottom-right-radius: 1rem;
     padding: 1.5rem 2rem;
+
+    & .timeline__sources {
+      list-style-type: square;
+      padding-left: 2rem;
+    }
   }
 }
 

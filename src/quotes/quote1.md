@@ -2,8 +2,9 @@
 order: 1
 date: 2024-08-26
 logo: placeholder150.png
-author: Name der Partei 1
+author: ÖVP
 source: https://example.com
 ---
 
-Politik-Zitat 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+"Koalitionsbedingung"
+&ndash; Nehammer

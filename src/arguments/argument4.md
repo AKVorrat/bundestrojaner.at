@@ -1,6 +1,6 @@
 ---
 order: 4
-title: Was ist Argument 4?
+title: Staatlich geförderte Unsicherheit
 ---
 
-Argument 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Mit dem Offenhalten von Sicherheitslücken verletzt der Staat seine positive Schutzplicht gegenüber seinen Bürger:innen – und ignoriert die immensen Risiken solch tiefliegender Sicherheitslücken. Er investiert unser Steuergeld also nicht nur in den Bundestrojaner als Überwachunginstrument, sondern auch in die Förderung von Bedrohnungsszenarien und die Schwächung unserer IT-Sicherheit.

@@ -1,6 +1,6 @@
 ---
 order: 1
-title: Was ist Argument 1?
+title: Bundestrojaner = Komplettzugriff
 ---
 
-Argument 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Um den Bundestrojaner einsetzen zu können, müssen bewusst gefährliche Sicherheitslücken auf all unseren Smartphones offengehalten werden. Diese Sicherheitslücken liegen so tief, dass sie immer Zugriff auf das gesamte Gerät ermöglichen. Eine "Beschränkung auf Chats" ist so, als würde man ein Zimmer durchsuchen wollen, ohne vorher durch das restliche Haus zu gehen und scheitert schlicht an der technischen Realität.

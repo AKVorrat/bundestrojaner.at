@@ -2,8 +2,12 @@
 order: 2
 date: 2024-08-26
 logo: placeholder150.png
-author: Name der Partei 2
+author: SPÖ
 source: https://example.com
 ---
 
-Politik-Zitat 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+"Warum sind wir dagegen? Weil wir sehen, dass es mit der Messengerüberwachung, den Moment gibt, wo es ein Einfallstor braucht, in diese Messengerdienste und damit auch ein Sicherheitsrisiko geschaffen wird, nicht nur für Privatspersonen, sondern auch für den gesammten Staat"
+&ndash; Michael Kögl, Bundesvorstandmitglied SPÖ
+
+"Es ist Bundespartelinie gegen den Bundestrojaner zu sein!"
+&ndash; K.K.

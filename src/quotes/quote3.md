@@ -2,8 +2,12 @@
 order: 3
 date: 2024-08-26
 logo: placeholder150.png
-author: Name der Partei 3
+author: FPÖ
 source: https://example.com
 ---
 
-Politik-Zitat 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+"Ich habe gesen, [...] dass die Polizisten ein bestimmtes Instrumentariat brauchen. Ich bin aber in der Zwischenzeit wirklich zur Überzeugung gekommen, dass es nicht diese Form der Massenüberwachung sein kann."
+&ndash; Herbert Kickl, FPÖ-Chef
+
+"Als größerer in einer Koalition sagen wir dem Kleineren: Bundestrojaner nicht. Den kannst du dir abschminken. Das ist keine Forderung, das ist ein Versprechen."
+&ndash; G.D.

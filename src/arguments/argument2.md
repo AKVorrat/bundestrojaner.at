@@ -1,6 +1,6 @@
 ---
 order: 2
-title: Was ist Argument 2?
+title: Offene Hintertüren für Kriminelle
 ---
 
-Argument 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Es gibt keine magische Hintertür nur für "die Guten". Die Sicherheitslücken, durch die die Behörden per Bundestrojaner auf ein Smartphone einsteigen würden, "gehören" nicht dem Staat. Diese Hintertüren stehen auch kriminellen Hackern und allen anderen feindlichen Akteuren offen und geben ihnen Komplettzugriff auf unsere Smartphones.

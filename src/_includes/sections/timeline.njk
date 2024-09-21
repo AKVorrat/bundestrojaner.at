@@ -2,7 +2,7 @@
   <div class="flex flex-column bg-light align-items-center text-white px1m py4">
     <img id="history" class="drop-shadow" src="/img/bt_icon.svg" width="125" alt="bundestrojaner illustration" style="margin-top: -8rem;">
     <h2 class="uppercase text-center text-purple mt1 mb0">
-      Bundestrojaner History
+      Was bisher geschah...
     </h2>
   </div>
   <div class="timeline-icon">
@@ -26,6 +26,14 @@
                 <p>
                   {{ record.content }}
                 </p>
+                <h5 class="mt1">Quellen</h5>
+                <ul class="timeline__sources text-sm">
+                  {% for q in record.sources %}
+                    <li>
+                      <a class="ext" href="{{ q.url }}">{{ q.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
               </li>
             {% endfor %}
           </ul>

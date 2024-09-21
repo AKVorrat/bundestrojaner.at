@@ -4,11 +4,23 @@
     "entries": [
       {
         "month": "August",
-        "content": "This is now, not much to say..."
+        "content": "Trotz anhaltend schwerer Kritik, ohne der verpflichtenden Wirkungsfolgenabschätzung und ohne eine existierende technische Lösung schickt ÖVP Innenminister Gerhard Karner wieder ein Gesetz in Begutachtung, um den Bundestrojaner zu legalisieren. Die Kernprobleme, die schon der Verfassungsgerichtshof 2019 kritisiert hat, bleiben bestehen.",
+        "sources": [
+          {
+            "title": "Staatsschutz- und Nachrichtendienstgesetz, Änderung (350/ME)",
+            "url": "https://www.parlament.gv.at/gegenstand/XXVII/ME/350"
+          }
+        ]
       },
       {
-        "month": "July",
-        "content": "This was last month. Summer - it was hot!"
+        "month": "April",
+        "content": "Sogar im Zuge der Affäre um Egisto Ott - einem der größten Spionageskandale der Republik - wird der Bundestrojaner gefordert. Die ÖVP will auf den Missbrauch von Kompetenzen mit der Ausweitung von Kompetenzen reagieren. ",
+        "sources": [
+          {
+            "title": "Nicht Genügend für den Bundestrojanerentwurf des Innenministeriums",
+            "url": "https://epicenter.works/content/nicht-genuegend-fuer-den-bundestrojanerentwurf-des-innenministeriums"
+          }
+        ]
       }
     ]
   },
@@ -16,8 +28,29 @@
     "year": 2023,
     "entries": [
       {
-        "month": "March",
-        "content": "Something that happened more than a year ago."
+        "month": "Juni",
+        "content": "Obwohl der Terroranschlag auf die Wiener Regenbogenparade erfolgreich vereitelt wurde, fordern ÖVP Innenminister Karner und Staatsschutzchef Haijawi-Pirchner wieder mehr Überwachungsmöglichkeiten durch den Einsatz eines Bundestrojaners.",
+        "sources": [
+          {
+            "title": "Warum wir wieder über den Bundestrojaner diskutieren (müssen)",
+            "url": "https://www.tageins.at/warum-wir-wieder-uber-den-bundestrojaner-diskutieren-mussen-vereitelter-anschlag-pride/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "entries": [
+      {
+        "month": "Dezember",
+        "content": "Der Verfassungsgerichtshof Österreich stuft den Bundestrojaner und eine Reihe weiterer Maßnahmen des Überwachungspakets als verfassungswidrig ein und hebt die Gesetze auf noch bevor sie in Kraft treten.",
+        "sources": [
+          {
+            "title": "VfGH: Kfz-Kennzeichenerfassung und Bundestrojaner verfassungswidrig",
+            "url": "https://www.vfgh.gv.at/medien/Kfz-Kennzeichenerfassung_und__Bundestrojaner__verfass.de.php"
+          }
+        ]
       }
     ]
   },
@@ -25,17 +58,68 @@
     "year": 2018,
     "entries": [
       {
-        "month": "October",
-        "content": "Something that happened a long time ago."
+        "month": "April",
+        "content": "Das Überwachungspaket wird von der neuen ÖVP/FPÖ-Regierung wieder aufgegriffen. Die Warnungen von Expert:innen und Bürger:innen werden konsequent ignoriert und das Überwachungspaket wird unter FPÖ Innenminister Kickl verabschiedet.",
+        "sources": [
+          {
+            "title": "Staatliche Spionagesoftware gefährdet IT-Sicherheit aller",
+            "url": "https://epicenter.works/thema/bundestrojaner/page-1"
+          }
+        ]
       }
     ]
   },
   {
-    "year": 2012,
+    "year": 2017,
     "entries": [
       {
-        "month": "December",
-        "content": "Something that happened a very long time ago."
+        "month": "August",
+        "content": "Aufgrund massiver Kritik von zahlreichen Institutionen wie epicenter.works, dem Roten Kreuz, Vertreter:innen von Universitäten und einer Rekordmenge an Stellungnahmen von Bürger:innen, wird das Überwachungspaket nicht verabschiedet.",
+        "sources": [
+          {
+            "title": "SPÖ lässt Sicherheitspaket endgültig platzen",
+            "url": "https://www.derstandard.at/story/2000063311153/spoe-laesst-sicherheitspaket-endgueltig-platze"
+          },
+          {
+            "title": "Stoppt das Überwachungspaket!",
+            "url": "https://überwachungspaket.at"
+          }
+        ]
+      },
+      {
+        "month": "Juli",
+        "content": "Justizminister Wolfgang Brandstetter und Innenminister Wolfgang Sobotka schicken ein Überwachungspaket in Begutachtung. Ein Kerninhalt des Pakets ist die Einführung eines Bundestrojaners.",
+        "sources": [
+          {
+            "title": "Nach Kritik: Beschluss von Sicherheitspaket rückt in weite Ferne",
+            "url": "https://kurier.at/politik/inland/nach-kritik-beschluss-von-sicherheitspaket-rueckt-in-weite-ferne/277.581.199"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2016,
+    "entries": [
+      {
+        "month": "Juni",
+        "content": "Noch während vor seinem Ministerium eine Protestaktion von epicenter.works läuft gesteht Justizminister Wolfgang Brandstetter zu, dass der Vorschlag zur Einführung eines Bundestrojaners schwere Mängel aufweise und er angesichts der Kritik diesen Vorschlag zurückzieht.",
+        "sources": [
+          {
+            "title": "Puls4: Bundestrojaner (Video)",
+            "url": "https://www.youtube.com/watch?v=lee2oogWm_s"
+          }
+        ]
+      },
+      {
+        "month": "März",
+        "content": "Der erste Anlauf für ein Gesetz zur Legalisierung eines Bundestrojaners wird in Österreich in Begutachtung geschickt.",
+        "sources": [
+          {
+            "title": "Staatliche Überwachungssoftware bringt mehr Probleme als sie lösen könnte",
+            "url": "https://epicenter.works/content/staatliche-ueberwachungssoftware-bringt-mehr-probleme-als-sie-loesen-koennte"
+          }
+        ]
       }
     ]
   }

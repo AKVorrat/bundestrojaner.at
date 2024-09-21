@@ -1,7 +1,7 @@
 {
   "author": "epicenter.works",
   "baseUrl": "https://bundestrojaner.at",
-  "description": "tbd",
+  "description": "Deine Stimme zählt! Ein Bundestrojaner ist verfassungswidrig und scheitert an der technischen Realität. Unterstütze unsere Forderung und erfahre, was andere sagen.",
   "title": "bundestrojaner.at",
   "email": "webmaster@epicenter.works",
   "menu": [
@@ -80,6 +80,16 @@
       "title": "Ars Boni 518 Messengerüberwachung",
       "cover": "placeholder720.png",
       "url": "https://www.youtube-nocookie.com/embed/OmdOMiUMAWw"
+    },
+    {
+      "title": "Signal Chefin warnt vor Messenger-Überwachung - ZIB 2",
+      "cover": "placeholder720.png",
+      "url": "https://www.youtube-nocookie.com/embed/rqs2JFRMc-I"
+    },
+    {
+      "title": " Puls4: Bundestrojaner",
+      "cover": "placeholder720.png",
+      "url": "https://www.youtube-nocookie.com/embed/lee2oogWm_s"
     }
   ],
   "footerButtons": [
