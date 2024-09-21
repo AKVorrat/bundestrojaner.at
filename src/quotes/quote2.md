@@ -9,5 +9,5 @@ source: https://example.com
 "Warum sind wir dagegen? Weil wir sehen, dass es mit der Messengerüberwachung, den Moment gibt, wo es ein Einfallstor braucht, in diese Messengerdienste und damit auch ein Sicherheitsrisiko geschaffen wird, nicht nur für Privatspersonen, sondern auch für den gesammten Staat"
 &ndash; Michael Kögl, Bundesvorstandmitglied SPÖ
 
-"Es ist Bundespartelinie gegen den Bundestrojaner zu sein!"
+"Es ist Bundesparteilinie gegen den Bundestrojaner zu sein!"
 &ndash; K.K.
