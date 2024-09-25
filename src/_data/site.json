@@ -63,17 +63,14 @@
   "videos": [
     {
       "title": "Signal Chefin warnt vor Messenger-Überwachung - ZIB 2",
-      "cover": "placeholder720.png",
       "url": "https://www.youtube-nocookie.com/embed/rqs2JFRMc-I"
     },
     {
       "title": "Ars Boni 518 Messengerüberwachung",
-      "cover": "placeholder720.png",
       "url": "https://www.youtube-nocookie.com/embed/OmdOMiUMAWw"
     },
     {
       "title": "Secure Messaging (and current attacks against it)",
-      "cover": "placeholder720.png",
       "url": "https://media.ccc.de/v/secure-messaging-and-current-attacks-against-it/oembed"
     }
   ],
