@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
   if (swiperFeedback && swiperFeedback instanceof HTMLElement) {
     const swiper = new Swiper('.swiper-feedback', {
       autoplay: {
-        delay: 2000,
+        delay: 4000,
         disableOnInteraction: true,
         pauseOnMouseEnter: true
       },

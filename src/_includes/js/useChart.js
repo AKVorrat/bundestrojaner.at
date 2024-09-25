@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   function getPercentage(n) {
-    return (n / (inputData.contra + inputData.pro)) * 100
+    return Math.round((n / (inputData.contra + inputData.pro)) * 100)
   }
 
   document.querySelectorAll('.feedback__item').forEach((e) => {

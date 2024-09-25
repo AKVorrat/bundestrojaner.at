@@ -1,13 +1,11 @@
 ---
 order: 5
-date: 2024-08-26
-logo: placeholder150.png
-author: Neos
-source: https://example.com
+logo: NEOS_Logo.jpg
+author: NEOS
 ---
 
-"Der Verfassunggerichtshof hat bereits im Jahr 2019 festgestellt, dass ein Bundestrojaner verfassungswidrig ist."
-&ndash; Niki Scherak
+_"Der Verfassungsgerichtshof hat bereits im Jahr 2019 festgestellt, dass ein Bundestrojaner verfassungswidrig ist."_
+&ndash; **Niki Scherak**, Sprecher für Verfassung und Menschenrechte NEOS
 
-"Da werden Sicherheitslücken vom Staat ausgenutzt. [...] Der Staat hat Interesse daran, dass die Lücken so lange wie möglich offen sind. Das gefährdet wieder die gesamte Bevölkerung"
-&ndash; I. H.
+_"Da werden Sicherheitslücken vom Staat ausgenutzt. [...] Der Staat hat Interesse daran, dass die Lücken so lang wie möglich offen sind. Das gefährdet wieder die gesamte Bevölkerung"_
+&ndash; **Ines Holzegger**, IT-Expertin und Wiener Kandidatin für die Nationalratswahl NEOS

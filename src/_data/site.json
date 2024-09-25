@@ -62,19 +62,9 @@
   ],
   "videos": [
     {
-      "title": "Terrorbekämpfung",
-      "cover": "placeholder1280.png",
-      "url": "https://www.youtube-nocookie.com/embed/ylluwetQEkQ"
-    },
-    {
-      "title": "Wundermittel",
+      "title": "Signal Chefin warnt vor Messenger-Überwachung - ZIB 2",
       "cover": "placeholder720.png",
-      "url": "https://www.youtube-nocookie.com/embed/ImHRrETVuJY"
-    },
-    {
-      "title": "Secure Messaging (and current attacks against it)",
-      "cover": "placeholder720.png",
-      "url": "https://media.ccc.de/v/secure-messaging-and-current-attacks-against-it/oembed"
+      "url": "https://www.youtube-nocookie.com/embed/rqs2JFRMc-I"
     },
     {
       "title": "Ars Boni 518 Messengerüberwachung",
@@ -82,14 +72,9 @@
       "url": "https://www.youtube-nocookie.com/embed/OmdOMiUMAWw"
     },
     {
-      "title": "Signal Chefin warnt vor Messenger-Überwachung - ZIB 2",
+      "title": "Secure Messaging (and current attacks against it)",
       "cover": "placeholder720.png",
-      "url": "https://www.youtube-nocookie.com/embed/rqs2JFRMc-I"
-    },
-    {
-      "title": " Puls4: Bundestrojaner",
-      "cover": "placeholder720.png",
-      "url": "https://www.youtube-nocookie.com/embed/lee2oogWm_s"
+      "url": "https://media.ccc.de/v/secure-messaging-and-current-attacks-against-it/oembed"
     }
   ],
   "footerButtons": [

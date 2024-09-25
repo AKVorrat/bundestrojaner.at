@@ -342,3 +342,7 @@
 .uppercase {
   text-transform: uppercase;
 }
+
+.sr-only {
+  visibility: hidden;
+}

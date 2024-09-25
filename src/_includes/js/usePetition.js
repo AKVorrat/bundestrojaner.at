@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-  const id = 'c05e2728-ce97-4926-9e8c-45ef267e3db2'
-  // const id = 'a8870f8d-31f2-4e8f-8ec1-cb8e5429cc82' // prod campaign
+  const id = 'a8870f8d-31f2-4e8f-8ec1-cb8e5429cc82'
   const signaturesLimit = 10
 
   document.getElementById('campaign1-form').src = `https://campaign.epicenter.works/de/campaign/${id}`

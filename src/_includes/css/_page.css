@@ -113,7 +113,8 @@ p:not(:last-of-type) {
 }
 
 b,
-p b {
+p b,
+strong {
   font-weight: 700;
 }
 
@@ -210,10 +211,13 @@ header {
   & .header-logo__inner {
     max-width: 720px;
 
+    & h1 {
+      text-align: center;
+    }
+
     @media screen and (max-width: 576px) {
       & h1 {
         font-size: clamp(1rem, 10vw, 1.825rem);
-        text-align: center;
       }
     }
   }
@@ -222,7 +226,7 @@ header {
     padding: 2rem 2rem .5rem;
 
     & .header-logo__inner {
-      max-width: 576px;
+      max-width: 640px;
     }
   }
 }
@@ -557,6 +561,14 @@ footer a:active {
   --mb: 3rem;
 }
 
+.section-chart {
+  & .section-heading {
+    @media(max-width: 576px) {
+      text-align: center;
+    }
+  }
+}
+
 .section-chart__image {
   margin-bottom: -4rem;
 
@@ -583,7 +595,7 @@ footer a:active {
 }
 
 .section-quotes__item {
-  background-color: var(--light);
+  background-color: var(--white);
   border-top-right-radius: 4rem;
   border-bottom-left-radius: 4rem;
   padding: 2rem 2.5rem;
@@ -679,6 +691,16 @@ summary:active {
 
       @media screen and (min-width: 1024px) {
         padding: 3rem 6rem 4rem;
+
+        & > div {
+          max-width: 85%;
+        }
+      }
+
+      & > div > p {
+        @media screen and (max-width: 576px) {
+          text-align: center;
+        }
       }
     }
   }
@@ -720,6 +742,10 @@ summary:active {
       & li h4,
       & li h5 {
         color: var(--purple);
+      }
+
+      & li h5 {
+        font-weight: normal;
       }
 
       & > li:not(:last-child) {
