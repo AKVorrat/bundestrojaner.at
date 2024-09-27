@@ -155,6 +155,11 @@
   padding-right: 2rem;
 }
 
+.px3 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .py2 {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -285,6 +290,10 @@
 
 .bg-purple {
   background-color: var(--purple);
+}
+
+.bg-white {
+  background-color: var(--white);
 }
 
 .font-mono {
