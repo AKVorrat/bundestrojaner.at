@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
       } else {
         btnBtt.classList.remove('shown')
       }
-    }))
+    }, 250))
   }
 
   // Arguments: expand/collapse button
