@@ -4,8 +4,8 @@
   "description": "bundestrojaner.at",
   "type": "module",
   "scripts": {
-    "deploy": "rm -R public && eleventy",
-    "serve": "eleventy --serve",
+    "build": "rm -R public && eleventy",
+    "dev": "eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
