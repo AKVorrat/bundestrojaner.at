@@ -1,7 +1,62 @@
 [
   {
+    "year": 2025,
+    "entries": [
+      {
+        "month": "April",
+        "content": "Schon in seiner Antrittsrede fordert SPÖ Staatssekretär Leichtfried im Innenministerium einen Bundestrojaner. So schnell ist die SPÖ noch nie umgefallen! Gemeinsam mit ÖVP Innenminister Karner bringt Leichtfried einen minimal abgeänderten Vorschlag für einen Bundestorjaner in Begutachtung. Die NEOS halten sich anfangs bedeckt und scheinen das Überwachungsgesetz mitzutragen. Die Begutachtung läuft bis zum 3. Juni 2025.",
+        "sources": [
+          {
+            "title": "Bundestrojaner führt zur Massengefährdung der Bevölkerung - PULS24",
+            "url": "https://www.youtube.com/watch?v=jj3nKWJ8Fms"
+          }
+        ]
+      },
+      {
+        "month": "März",
+        "content": "Die Koalition aus ÖVP, SPÖ und NEOS einigt sich in ihrem Regierungsprogramm auf \"verfassungskonformen Gefährder-Überwachung\" und verweist explizit auf den abgelehnten Begutachtungsentwurf aus 2024 und will diesen scheinbar weiter verfolgen.",
+        "sources": [
+          {
+            "title": "Netzpolitische Analyse: Regierungsprogramm von ÖVP, SPÖ & NEOS",
+            "url": "https://epicenter.works/content/netzpolitische-analyse-regierungsprogramm-von-oevp-spoe-neos"
+          }
+        ]
+      },
+      {
+        "month": "Jänner",
+        "content": "Das geleakte Protokoll der Verhandlungen zwischen FPÖ und ÖVP zeigt klar die Forderung der ÖVP an der umstrittenen Überwachungsmaßnahme festzuhalten. Die FPÖ erteilt diesen Forderungen eine Abfuhr.",
+        "sources": [
+          {
+            "title": "Analyse des geleakten Verhandlungsprotokolls der FPÖ-ÖVP Koalitionsgespräche",
+            "url": "https://epicenter.works/content/analyse-des-geleakten-verhandlungsprotokolls-der-fpoe-oevp-koalitionsgespraeche"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "year": 2024,
     "entries": [
+      {
+        "month": "September",
+        "content": "Netzpolitischer Abend zur Nationalratswahl 2024 im Presseclub Concordia am 12.09.: FPÖ, SPÖ, Grüne und NEOs sagen NEIN zur Koalitionsbedingung Bundestrojaner von Bundeskanzler Karl Nehammer.",
+        "sources": [
+          {
+            "title": "Netzpolitische Diskussion zur Nationalratswahl 2024 - NetzPAT",
+            "url": "https://youtu.be/EFwJhSeQt2U"
+          }
+        ]
+      },
+      {
+        "month": "September",
+        "content": "Der Vorstoß der ÖVP einen Bundestrojaner zu legalisieren scheitert ein viertes mal aufgrund der fehlenden Verfassungskonformität und massiven Kritik in der Begutachtung. Knapp 100 Stellungnahmen langen beim Parlament ein und davon sind 94% ablehnend. Die Nationalratswahlen beenden die Debatte doch der damalige Kanzler Karl Nehammer fordert einen Bundestrojaner als Koalitionsbedingung.",
+        "sources": [
+          {
+            "title": "Nehammer macht Messenger-Überwachung zur Koalitionsbedingung",
+            "url": "https://www.derstandard.at/story/3000000232697/nehammer-macht-messenger-ueberwachung-zur-koalitionsbedingung"
+          }
+        ]
+      },
       {
         "month": "August",
         "content": "Trotz anhaltend schwerer Kritik, ohne der verpflichtenden Wirkungsfolgenabschätzung und ohne eine existierende technische Lösung schickt ÖVP Innenminister Gerhard Karner wieder ein Gesetz in Begutachtung, um den Bundestrojaner zu legalisieren. Die Kernprobleme, die schon der Verfassungsgerichtshof 2019 kritisiert hat, bleiben bestehen.",

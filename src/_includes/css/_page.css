@@ -775,6 +775,10 @@ summary:active {
     & .timeline__sources {
       list-style-type: square;
       padding-left: 2rem;
+
+      & li {
+        text-wrap: balance;
+      }
     }
   }
 }
