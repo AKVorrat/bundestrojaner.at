@@ -17,11 +17,16 @@
         {% include "js/useSwiper.js" %}
         {% include "js/usePetition.js" %}
         {% include "js/useChart.js" %}
-        {% include "js/ui.js" %}
       {% endset %}
       <script>
         {{ js | jsmin | safe }}
       </script>
     {% endif %}
+    {% set jscommon %}
+      {% include "js/ui.js" %}
+    {% endset %}
+    <script>
+      {{ jscommon | jsmin | safe }}
+    </script>
   </body>
 </html>

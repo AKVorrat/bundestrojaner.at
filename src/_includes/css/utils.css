@@ -105,7 +105,7 @@
 }
 
 .px1m {
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 1023px) {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -285,11 +285,11 @@
 }
 
 .bg-light {
-  background-color: var(--light);
+  background-color: var(--light) !important;
 }
 
 .bg-purple {
-  background-color: var(--purple);
+  background-color: var(--purple) !important;
 }
 
 .bg-white {

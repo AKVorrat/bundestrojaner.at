@@ -1,0 +1,53 @@
+---
+title: Stellungnahmen
+layout: base.njk
+image: /img/bundestrojaner.at_social_share.jpg
+permalink: /stellungnahmen/index.html
+---
+<section class="py4">
+  <div class="container-md pb4 px1m">
+    <a class="" href="/">↤ Zurück zur Startseite</a>
+    <h2 class="h1 uppercase text-center px1m mt2 mb2">
+      Stellungnahmen
+    </h2>
+    <ul class="section-quotes__list">
+      {% for item in collections.feedbackByDate | reverse %}
+        {% if item.templateContent %}
+          <li class="section-quotes__item bg-light shadow" style="border: 1px solid var(--blue);">
+            <p class="text-xs">
+              Stellungnahme vom <time datetime="{{ item.date | date('YYYY-MM-DD') }}">{{ item.date | date('DD.MM.YYYY') }}</time>
+            </p>
+            <div class="fb-header flex align-items-center mobile-column gap2 mt2">
+              {% if item.data.logo %}
+                <img src="/img/logos/{{ item.data.logo }}" width="100" alt="{{ item.data.author }} logo" loading="lazy">
+              {% endif %}
+              <h2 class="h5">
+                {{ item.data.author }}
+              </h2>
+            </div>
+            <div class="mt1">
+              {{ item.templateContent | safe }}
+              <p class="text-right mt1 mb0">
+                <a class="ext" href="{{ item.data.source }}">Quelle</a>
+              </p>
+            </div>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <div class="text-center mt4">
+      <a href="/">↤ Zurück zur Startseite</a>
+    </div>
+  </div>
+</section>
+{% include "btt.njk" %}
+
+<style>
+  .fb-header {
+    margin-right: auto;
+
+    @media(min-width: 768px;) {
+      margin-right: 0;
+    }
+  }
+</style>

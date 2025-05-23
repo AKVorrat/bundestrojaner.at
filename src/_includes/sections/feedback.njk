@@ -1,6 +1,6 @@
 <section class="bg-light section-feedback py4">
   <div class="container-md">
-    <div class="text-center mt2 mb4">
+    <div class="text-center px1m mt2 mb4">
       <a class="btn btn--red" href="#sign-petition">Jetzt unterschreiben</a>
       <h2 class="uppercase text-center text-purple mt4">
         Aktuelle Begutachtung
@@ -9,7 +9,7 @@
       <a class="btn" href="https://www.parlament.gv.at/gegenstand/XXVIII/ME/8">Jetzt Stellungnahme abgeben!</a>
     </div>
     <h2 class="uppercase text-center text-purple mb2">
-      Stellungnahmen
+      Bisherige Stellungnahmen
     </h2>
     <!-- Slider main container -->
     <div class="swiper swiper-feedback shadow">
@@ -30,8 +30,8 @@
                   <blockquote>
                     {{ item.templateContent | safe }}
                   </blockquote>
-                  <p class="text-center mt1 mb0">
-                    <a class="ext" href="{{ item.data.source }}">Quelle</a>
+                  <p class="text-center text-sm mt1 mb0">
+                    Stellungnahme vom <time datetime="{{ item.date | date('YYYY-MM-DD') }}">{{ item.date | date('DD.MM.YYYY') }}</time> | <a class="ext" href="{{ item.data.source }}">Quelle</a>
                   </p>
                 </div>
               </div>

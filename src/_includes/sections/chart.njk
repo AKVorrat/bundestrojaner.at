@@ -14,25 +14,30 @@
   <div class="container-md pt4-md pb4">
     <div class="grid grid2 gap2">
       <div id="chart" class="feedback__chart"></div>
-      <ul class="block feedback__list px1m">
-        {% for item in collections.feedback %}
-          {% set verdict = 'Contra' %}
-          {% if item.data.verdict == 1 %}
-            {% set verdict = 'Pro' %}
-          {% endif %}
-          <li class="feedback__item" data-verdict="{{ item.data.verdict }}">
-            <p class="bold m0">
-              {{ item.data.author }}
-            </p>
-            <p class="text-xs m0">
-              Datum: <time datetime="{{ item.date | date('YYYY-MM-DD') }}">{{ item.date | date('DD.MM.YYYY') }}</time> | Bewertung: {{ verdict }}
-            </p>
-            <p class="text-sm m0">
-              <a class="ext" href="{{ item.data.source }}">Quelle</a>
-            </p>
-          </li>
-        {% endfor %}
-      </ul>
+      <div>
+        <ul class="block feedback__list px1m mb1">
+          {% for item in collections.feedbackByDate | reverse %}
+            {% set verdict = 'Contra' %}
+            {% if item.data.verdict == 1 %}
+              {% set verdict = 'Pro' %}
+            {% endif %}
+            <li class="feedback__item" data-verdict="{{ item.data.verdict }}">
+              <p class="bold m0">
+                {{ item.data.author }}
+              </p>
+              <p class="text-xs m0">
+                Datum: <time datetime="{{ item.date | date('YYYY-MM-DD') }}">{{ item.date | date('DD.MM.YYYY') }}</time> | Bewertung: {{ verdict }}
+              </p>
+              <p class="text-sm m0">
+                <a class="ext" href="{{ item.data.source }}">Quelle</a>
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
+        <div class="text-center p1" style="border-top: 1px solid var(--blue);">
+          <a class="btn" href="/stellungnahmen/">Liste anzeigen</a>
+        </div>
+      </div>
     </div>
     <style>
       .ct-series-a .ct-slice-pie {

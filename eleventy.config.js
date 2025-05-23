@@ -12,6 +12,10 @@ const isProdDeployment = Boolean(
   && process.env.ELEVENTY_RUN_MODE === 'build'
 )
 
+function sortByDate(a, b) {
+  return (new Date(a.data.date)) - (new Date(a.data.date))
+}
+
 function sortByOrder(a, b) {
   return a.data.order - b.data.order
 }
@@ -64,6 +68,11 @@ export default async function(config) {
   config.addCollection('feedback', async(collection) => {
     return collection.getFilteredByGlob('./src/feedback/**/*.md')
       .sort(sortByOrder)
+  })
+
+  config.addCollection('feedbackByDate', async(collection) => {
+    return collection.getFilteredByGlob('./src/feedback/**/*.md')
+      .sort(sortByDate)
   })
 
   config.addCollection('quotes', async(collection) => {
