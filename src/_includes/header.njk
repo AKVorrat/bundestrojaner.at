@@ -1,14 +1,18 @@
 <header>
   <div class="header-logo">
     <div class="header-logo__inner flex gap2 mobile-column align-items-center justify-content-center mx-auto">
-      <img class="block" src="/img/bt_icon.svg" width="125" alt="bundestrojaner icon">
-      <h1 class="text-light uppercase m0">
-        {% if isFront %}
-          {{ title }}
-        {% else %}
-          {{ site.title }}
-        {% endif %}
-      </h1>
+      <a class="block decoration-none" href="/">
+        <img class="block" src="/img/bt_icon.svg" width="125" alt="bundestrojaner icon">
+      </a>
+      <a class="block decoration-none" href="/">
+        <h1 class="text-light uppercase m0">
+          {% if isFront %}
+            {{ title }}
+          {% else %}
+            {{ site.title }}
+          {% endif %}
+        </h1>
+      </a>
     </div>
   </div>
   {% if isFront %}

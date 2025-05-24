@@ -355,3 +355,11 @@
 .sr-only {
   visibility: hidden;
 }
+
+.decoration-none {
+  text-decoration: none;
+
+  &:is(:focus, :hover) {
+    text-decoration: none;
+  }
+}
