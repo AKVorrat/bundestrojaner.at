@@ -1,5 +1,6 @@
 import dotenv from 'dotenv'
 import { EleventyHtmlBasePlugin } from '@11ty/eleventy'
+import { eleventyImageTransformPlugin } from '@11ty/eleventy-img'
 import htmlmin from 'html-minifier'
 import markdownIt from 'markdown-it'
 import { minify } from 'terser'
@@ -23,6 +24,7 @@ function sortByOrder(a, b) {
 export default async function(config) {
   // PLUGINS
   config.addPlugin(EleventyHtmlBasePlugin)
+  config.addPlugin(eleventyImageTransformPlugin)
 
   config.addNunjucksAsyncFilter('jsmin', async function(code, callback) {
     if (isProdDeployment) {

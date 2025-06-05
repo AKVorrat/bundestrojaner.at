@@ -1,7 +1,7 @@
 <section id="zitate" class="section-quotes">
   <div class="container flex flex-column align-items-center justify-content-center gap4">
     <div class="section-quotes__image mx-auto">
-      <img class="block drop-shadow mx-auto" src="/img/quotes.svg" alt="quotes illustration" width="200">
+      <img class="block drop-shadow mx-auto" src="/img/quotes.svg" alt="quotes illustration" width="200" eleventy:ignore>
       <h2 class="text-light uppercase text-center px1m mt1 mb2">
         Was sagt die Politik?
       </h2>
@@ -14,7 +14,7 @@
       {% for item in collections.quotes %}
         <li class="section-quotes__item">
           <div class="flex align-items-center gap2">
-            <img src="/img/logos/{{ item.data.logo }}" width="100" alt="{{ item.data.author }} logo" loading="lazy">
+            <img src="/static/img/logos/{{ item.data.logo }}" width="100" alt="{{ item.data.author }} logo" loading="lazy">
             <h3 class="sr-only m0">
               {{ item.data.author }}
             </h3>
@@ -25,5 +25,10 @@
         </li>
       {% endfor %}
     </ul>
+    <div class="mt4">
+      <p class="text-center m0">
+        <a class="btn btn--big btn--light ext" href="https://epicenter.works/medienspiegel" target="_blank">Medienspiegel</a>
+      </p>
+    </div>
   </div>
 </section>

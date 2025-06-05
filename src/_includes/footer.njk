@@ -1,5 +1,5 @@
 <div class="flex justify-content-center px1m mt4" style="z-index: 10;">
-  <img class="drop-shadow" src="/img/bt_trojan_horse.svg" width="300" alt="bundestrojaner illustration" style="margin-bottom: -3rem;">
+  <img class="drop-shadow" src="/img/bt_trojan_horse.svg" width="300" alt="bundestrojaner illustration" style="margin-bottom: -3rem;" eleventy:ignore>
 </div>
 <footer class="bg-purple pt4">
   <ul class="flex gap1 gap2-md align-items-center justify-content-center flex-wrap mt1">
@@ -22,7 +22,7 @@
     {% for item in site.footerSocial %}
       <li class="block">
         <a class="social-icon block" href="{{ item.url }}" target="_blank" title="{{ item.icon }}">
-          <img class="block" src="/img/icons/{{ item.icon }}.svg" width="24" alt="{{ item.icon }}">
+          <img class="block" src="/img/icons/{{ item.icon }}.svg" width="24" alt="{{ item.icon }}" eleventy:ignore>
         </a>
       </li>
     {% endfor %}

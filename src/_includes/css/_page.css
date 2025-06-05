@@ -360,12 +360,15 @@ footer a:active {
   }
 }
 
+.btn--big {
+  font-size: 1.125rem;
+  padding: .625rem 1.5rem;
+}
+
 .btn--red,
 .btn--red:active {
   background: crimson;
   color: var(--white);
-  font-size: 1.25rem;
-  padding: .75rem 1.75rem;
 
   &:is(:focus, :hover) {
     background: #ff0000;
@@ -714,6 +717,11 @@ summary:active {
         @media screen and (max-width: 576px) {
           text-align: center;
         }
+      }
+
+      & .feedback-logo {
+        height: 50px;
+        width: auto;
       }
     }
   }

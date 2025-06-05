@@ -1,7 +1,7 @@
 <section id="share" class="section-share">
   <div class="container flex flex-column align-items-center justify-content-center gap4">
     <div class="section-share__image mx-auto" style="margin-bottom: -3rem;">
-      <img class="block drop-shadow mx-auto" src="/img/share.svg" alt="share illustration" width="200">
+      <img class="block drop-shadow mx-auto" src="/img/share.svg" alt="share illustration" width="200" eleventy:ignore>
       <h2 class="text-light uppercase text-center mt1 mb2">
         Kampagne Teilen
       </h2>
@@ -13,7 +13,7 @@
     {% for item in site.shareButtons %}
       <li class="block">
         <a class="social-icon block" href="{{ item.url }}" target="_blank" title="{{ item.icon }}">
-          <img class="block" src="/img/icons/{{ item.icon }}.svg" width="24" alt="{{ item.icon }}">
+          <img class="block" src="/img/icons/{{ item.icon }}.svg" width="24" alt="{{ item.icon }}" eleventy:ignore>
         </a>
       </li>
     {% endfor %}
